@@ -1,0 +1,23 @@
+.footerContainer {
+  color: rgba(255,255,255,.4);
+  background-color: #201a16;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+}
+
+.footerInner {
+  line-height: 1.6em;
+  padding: 64px 32px;
+  max-width: 1020px;
+  width: auto;
+  margin: auto;
+  font-family: 'Sintony', sans-serif;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  font-weight: 400;
+  font-style: normal;
+  color: rgba(255,255,255,.9);
+  text-align: center;
+}
