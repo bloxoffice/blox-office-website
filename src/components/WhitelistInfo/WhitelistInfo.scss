@@ -1,0 +1,41 @@
+.wli-container {
+  height: 720px;
+}
+
+.wli-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 81%;
+  margin: auto;
+}
+
+.wli-logo-container {
+  padding: 100px 0 150px;
+}
+
+.wli-info {
+  padding: 130px 0 200px;
+}
+
+.bloxoffice-hero {
+  height: 480px;
+  width: 652px;
+}
+
+.bloxoffice-title {
+  width: 404px;
+  height: 66px;
+}
+
+.decentralised-movie {
+  width: 410px;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5e6d;
+  text-transform: uppercase;
+}

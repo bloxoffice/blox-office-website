@@ -29,7 +29,7 @@ const Header = () => (
           Team
         </div>
       </div>
-      <div className="login-btn-container">
+      <div className="link-items login-btn-container">
         Login/Signup
       </div>
     </div>

@@ -4,6 +4,12 @@ import { connect } from 'react-redux';
 
 import Header from 'components/Header';
 import Footer from 'components/Footer';
+import WhitelistInfo from 'components/WhitelistInfo';
+import PlatformInfo from 'components/PlatformInfo';
+import WhitePaperInfo from 'components/WhitePaperInfo';
+import TokenomicsInfo from 'components/TokenomicsInfo';
+import Roadmap from 'components/Roadmap';
+import Team from 'components/Team';
 import { HomeSelector } from './Home.redux';
 
 import './Home.style.scss';
@@ -18,8 +24,12 @@ class Home extends React.Component {
     return (
       <div className="pageContainer">
         <Header />
-        <div className="content">
-        </div>
+        <WhitelistInfo />
+        <PlatformInfo />
+        <WhitePaperInfo />
+        <TokenomicsInfo />
+        <Roadmap />
+        <Team />
         <Footer />
       </div>
     );
