@@ -3,7 +3,7 @@ import React from 'react';
 import './Team.scss';
 
 const Team = () => (
-  <div>PlatformInfo</div>
+  <div>Team</div>
 );
 
 Team.defaultProps = {};

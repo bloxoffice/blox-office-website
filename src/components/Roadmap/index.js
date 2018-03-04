@@ -3,7 +3,7 @@ import React from 'react';
 import './Roadmap.scss';
 
 const Roadmap = () => (
-  <div>PlatformInfo</div>
+  <div>Roadmap</div>
 );
 
 Roadmap.defaultProps = {};

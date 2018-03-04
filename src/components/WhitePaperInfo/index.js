@@ -3,7 +3,7 @@ import React from 'react';
 import './WhitePaperInfo.scss';
 
 const WhitePaperInfo = () => (
-  <div>PlatformInfo</div>
+  <div>WhitePaperInfo</div>
 );
 
 WhitePaperInfo.defaultProps = {};

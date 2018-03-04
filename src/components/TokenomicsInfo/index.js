@@ -3,7 +3,7 @@ import React from 'react';
 import './TokenomicsInfo.scss';
 
 const TokenomicsInfo = () => (
-  <div>PlatformInfo</div>
+  <div>TokenomicsInfo</div>
 );
 
 TokenomicsInfo.defaultProps = {};
