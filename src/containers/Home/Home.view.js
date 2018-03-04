@@ -26,11 +26,12 @@ class Home extends React.Component {
         <Header />
         <WhitelistInfo />
         <PlatformInfo />
-        <WhitePaperInfo />
+        {/* <WhitePaperInfo /> */}
         <TokenomicsInfo />
-        <Roadmap />
-        <Team />
+        {/* <Roadmap /> */}
+        {/* <Team /> */}
         <Footer />
+        <div className="footer-bg" />
       </div>
     );
   }
