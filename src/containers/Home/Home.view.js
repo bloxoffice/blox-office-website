@@ -9,7 +9,7 @@ import PlatformInfo from 'components/PlatformInfo';
 // import WhitePaperInfo from 'components/WhitePaperInfo';
 import TokenomicsInfo from 'components/TokenomicsInfo';
 // import Roadmap from 'components/Roadmap';
-// import Team from 'components/Team';
+import Team from 'components/Team';
 import { HomeSelector } from './Home.redux';
 
 import './Home.style.scss';
@@ -29,7 +29,7 @@ class Home extends React.Component {
         {/* <WhitePaperInfo /> */}
         <TokenomicsInfo />
         {/* <Roadmap /> */}
-        {/* <Team /> */}
+        <Team />
         <Footer />
         <div className="footer-bg" />
       </div>
