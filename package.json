@@ -1,5 +1,5 @@
 {
-  "name": "Healthe",
+  "name": "Bloxoffice",
   "scripts": {
     "build": "webpack",
     "start": "webpack-dev-server",
