@@ -12,22 +12,22 @@ const members = [{
   alt: 'bharath',
   name: 'BHARATH KADALURI',
   role: 'Co-Founder',
-  desc: 'Full stack developer and BlockChain Expert',
-  email: 'bharath@bloxoffice.com',
+  desc: 'Blockchain Technology Influencer adept at developing complicated distributed systems',
+  email: 'bharath@bloxoffice.io',
 }, {
   photo: arko,
   alt: 'arko',
   name: 'ARKO GANGULI',
   role: 'Co-Founder',
-  desc: 'ICO Regulations Specialist and Market Maker',
-  email: 'arko@bloxoffice.com',
+  desc: 'Blockchain expert and regulations specialist',
+  email: 'arko@bloxoffice.io',
 }, {
   photo: rashad,
   alt: 'rashad',
   name: 'RASHAD HASAN',
   role: 'Co-Founder',
-  desc: 'Tokenomics Expert and BlockChain Evangelist\n',
-  email: 'rashad@bloxoffice.com',
+  desc: 'Market Maker and Crypto- Evangelist\n',
+  email: 'rashad@bloxoffice.io',
 }];
 
 const Member = ({ member }) => (

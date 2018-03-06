@@ -29,7 +29,7 @@ const WhitelistInfo = () => (
         </div>
         <div>
           <p className="pre-sales-label">Pre-sales starts in</p>
-          <Timer date="03/07/2018 22:00:00" />
+          <Timer date="04/15/2018 22:00:00" />
         </div>
       </div>
     </div>
