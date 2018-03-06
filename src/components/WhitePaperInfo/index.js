@@ -8,7 +8,7 @@ const WhitePaperInfo = () => (
   <div className="whitepaper-info">
     <div className="video-player">
       <EmbeddedVideo
-        videoUrl="https://www.youtube.com/watch?v=EKa5Gh9whgU"
+        videoUrl="https://www.youtube.com/watch?v=uFk7XwSWEcs"
       />
     </div>
     <div className="download-player-container">
