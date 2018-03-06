@@ -4,7 +4,7 @@ import './Roadmap.scss';
 
 const milestones = [{
   date: 'MARCH- 2018',
-  event: 'Pre-sale',
+  event: 'PRE-SALE',
 }, {
   date: 'APRIL-2018',
   event: 'CROWD SALE',

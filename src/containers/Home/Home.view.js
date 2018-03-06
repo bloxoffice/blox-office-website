@@ -6,7 +6,7 @@ import Header from 'components/Header';
 import Footer from 'components/Footer';
 import WhitelistInfo from 'components/WhitelistInfo';
 import PlatformInfo from 'components/PlatformInfo';
-// import WhitePaperInfo from 'components/WhitePaperInfo';
+import WhitePaperInfo from 'components/WhitePaperInfo';
 import TokenomicsInfo from 'components/TokenomicsInfo';
 import Roadmap from 'components/Roadmap';
 import Team from 'components/Team';
@@ -26,7 +26,7 @@ class Home extends React.Component {
         <Header />
         <WhitelistInfo />
         <PlatformInfo />
-        {/* <WhitePaperInfo /> */}
+        <WhitePaperInfo />
         <TokenomicsInfo />
         <Roadmap />
         <Team />
