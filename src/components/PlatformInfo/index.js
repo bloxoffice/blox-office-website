@@ -34,25 +34,25 @@ const PlatformInfo = () => (
     <div className="pli-content">
       <Platformitems
         plititle="Movie Crowdsale Platform"
-        plidesc="One sentence about the platform goes here and there here and here"
+        plidesc="World’s first Movie Tokenisation Portal"
         plilogo={crowdSale}
         plialt="crowd-sale"
       />
       <Platformitems
         plititle="Intellectual Property Platform"
-        plidesc="One sentence about the platform goes here and there here and here"
+        plidesc="Ascertainment of ownership and licensing of content"
         plilogo={ipPlatform}
         plialt="ip-platform"
       />
       <Platformitems
         plititle="Streaming Platform"
-        plidesc="One sentence about the platform goes here and there here and here"
+        plidesc="Community definition high definition streaming experience"
         plilogo={videoPlay}
         plialt="video-play"
       />
       <Platformitems
         plititle="Movie Ticket Exchange"
-        plidesc="One sentence about the platform goes here and there here and here"
+        plidesc="Find the tickets to your favourite movies here"
         plilogo={tickets}
         plialt="tickets"
       />
