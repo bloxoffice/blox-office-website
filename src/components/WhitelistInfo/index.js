@@ -3,6 +3,8 @@ import React from 'react';
 import bloxofficeHero from 'assets/images/bloxoffice-hero.png';
 import bloxofficeTitle from 'assets/images/bloxoffice-title.png';
 
+import Timer from '../Timer';
+
 import './WhitelistInfo.scss';
 
 const WhitelistInfo = () => (
@@ -17,6 +19,18 @@ const WhitelistInfo = () => (
           Decentralised movie experience
           powered by Blockchain
         </p>
+        <div className="email-form">
+          <input
+            type="text"
+            placeholder="Email address"
+            className="email-input"
+          />
+          <button className="whitelist-btn">JOIN WHITELIST</button>
+        </div>
+        <div>
+          <p className="pre-sales-label">Pre-sales starts in</p>
+          <Timer date="03/07/2018 22:00:00" />
+        </div>
       </div>
     </div>
   </div>

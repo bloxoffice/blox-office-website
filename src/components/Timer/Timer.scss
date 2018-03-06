@@ -1,0 +1,50 @@
+.timer-string {
+  font-size: 60px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5e6d;
+  font-family: WorkSansLight, sans-serif;
+  margin: 15px;
+}
+
+.timer-labels {
+  margin: 0;
+  position: relative;
+  font-size: 16px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5e6d;
+  font-family: WorkSansLight, sans-serif;
+}
+
+.days-label {
+  display: inline-block;
+  position: relative;
+  left: 28px;
+}
+
+.hours-label {
+  display: inline-block;
+  position: relative;
+  left: 60px;
+}
+
+.mins-label {
+  display: inline-block;
+  position: relative;
+  left: 98px;
+}
+
+.secs-label {
+  display: inline-block;
+  position: relative;
+  left: 145px;
+}
