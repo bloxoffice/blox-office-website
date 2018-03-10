@@ -89,3 +89,42 @@
   text-align: left;
   color: #9b9b9b;
 }
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .wli-container {
+    height: 1440px;
+  }
+
+  .wli-content {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+
+  .bloxoffice-hero {
+    width: 100%;
+  }
+
+  .bloxoffice-title {
+    width: 90%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .email-input {
+    width: 80%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .whitelist-btn {
+    margin-left: 5%;
+  }
+
+  .decentralised-movie {
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+}

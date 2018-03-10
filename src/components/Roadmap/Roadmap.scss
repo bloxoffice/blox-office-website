@@ -26,3 +26,12 @@
   fill: #6d6f7b;
   text-anchor: middle;
 }
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .roadmap-container {
+    display: none;
+  }
+}

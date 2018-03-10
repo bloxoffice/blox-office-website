@@ -46,3 +46,22 @@
   font-family: WorkSansLight, sans-serif;
   margin: 0;
 }
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 667px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .pli-content {
+    grid-template-columns: auto;
+  }
+
+  .pli-items {
+    padding: 56px 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .pli-item2 {
+    grid-column-end: span 2;
+  }
+}
