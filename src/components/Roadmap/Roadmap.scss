@@ -31,7 +31,11 @@
 and (min-device-width: 320px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
-  .roadmap-container {
-    display: none;
+  .roadmap-content {
+    width: 90%;
+  }
+
+  .stone-text {
+    font-size: 10px;
   }
 }
