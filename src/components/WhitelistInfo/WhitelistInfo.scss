@@ -95,7 +95,7 @@ and (min-device-width: 320px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .wli-container {
-    height: 1440px;
+    height: 1300px;
   }
 
   .wli-content {
@@ -126,5 +126,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
   .decentralised-movie {
     width: 90%;
     margin: 0 auto 10px;
+  }
+
+  .wli-logo-container {
+    padding: 30px 0;
+  }
+
+  .wli-info {
+    padding: 100px 0;
   }
 }
