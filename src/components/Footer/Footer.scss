@@ -54,9 +54,18 @@
 
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 667px)
+and (max-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
-  .footer-container {
-    display: none;
+  .footer-inner {
+    grid-template-columns: auto;
+  }
+
+  .box2 {
+    padding: 40px 0;
+    grid-template-columns: auto;
+  }
+
+  .footer-link {
+    margin-bottom: 20px;
   }
 }

@@ -41,9 +41,9 @@
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
   color: #6d6f7b;
   margin: 17px 0;
+  text-align: center;
 }
 
 .link-items {
@@ -52,7 +52,7 @@
 
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 667px)
+and (max-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .header-container {
     height: auto;
@@ -60,5 +60,13 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .header-content {
     grid-template-columns: auto;
+  }
+
+  .links-container {
+    grid-template-columns: auto;
+  }
+
+  .link-items {
+    margin-bottom: 10px;
   }
 }

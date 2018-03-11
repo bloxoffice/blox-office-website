@@ -24,11 +24,13 @@
 
 .bloxoffice-title {
   width: 404px;
+  max-width: 404px;
   height: 66px;
 }
 
 .decentralised-movie {
   width: 410px;
+  max-width: 410px;
   font-size: 22px;
   font-weight: normal;
   font-style: normal;
@@ -92,7 +94,7 @@
 
 @media only screen
 and (min-device-width: 320px)
-and (max-device-width: 667px)
+and (max-device-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .wli-container {
     height: 1300px;
@@ -120,7 +122,7 @@ and (-webkit-min-device-pixel-ratio: 2) {
   }
 
   .whitelist-btn {
-    margin-left: 5%;
+    margin-left: 8%;
   }
 
   .decentralised-movie {
