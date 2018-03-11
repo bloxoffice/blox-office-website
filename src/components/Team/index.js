@@ -31,7 +31,7 @@ const members = [{
 }];
 
 const Member = ({ member }) => (
-  <div>
+  <div className="member-container">
     <div>
       <img src={member.photo} alt={member.alt} className="member-photo" />
       <div className="member-content">

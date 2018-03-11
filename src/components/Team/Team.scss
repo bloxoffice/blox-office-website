@@ -95,7 +95,20 @@
 and (min-device-width: 320px)
 and (max-device-width: 667px)
 and (-webkit-min-device-pixel-ratio: 2) {
-  .team-container {
-    display: none;
+  .team-content {
+    grid-template-columns: auto;
+    width: 90%;
+  }
+
+  .member-photo {
+    width: 100%;
+  }
+
+  .member-container {
+    margin-bottom: 10px;
+  }
+
+  .member-content {
+    padding-bottom: 0;
   }
 }
