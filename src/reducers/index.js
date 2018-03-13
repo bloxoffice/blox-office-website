@@ -1,6 +1,8 @@
 import { combineReducers } from 'redux';
 import { HomeReducer } from 'containers/Home/Home.redux';
+import { CentralNotificationReducer } from 'containers/CentralNotifications/CentralNotifications.redux';
 
 export default combineReducers({
-  Home: HomeReducer,
+  home: HomeReducer,
+  centralNotification: CentralNotificationReducer,
 });

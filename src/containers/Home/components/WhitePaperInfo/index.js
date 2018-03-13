@@ -1,6 +1,6 @@
 import React from 'react';
 
-import EmbeddedVideo from '../EmbeddedVideo';
+import EmbeddedVideo from '../../../../components/EmbeddedVideo/index';
 
 import './WhitePaperInfo.scss';
 

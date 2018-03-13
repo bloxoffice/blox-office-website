@@ -35,3 +35,20 @@ input[type=number]::-webkit-outer-spin-button {
   margin: 0;
 }
 
+.central-notification {
+  position: fixed;
+  z-index: 10000;
+  border-bottom: 5px solid #8f232b;
+  font-size: 14px;
+  font-family: "WorkSansLight", sans-serif;
+  padding-top: 10px;
+  background-color: #f7f0f0;
+  left: 30%;
+  opacity: 1;
+  transition: all 3s ease-in-out;
+
+  &.hidden {
+    opacity: 0;
+  }
+}
+

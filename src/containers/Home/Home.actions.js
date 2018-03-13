@@ -1,58 +1,29 @@
-import { STOREGOALDATA, STOREVIDEOURL, STORECAMPAIGNDATA, GETCAMPAIGNDATASUCCESS } from './Home.constants';
+import urls from 'constants/urls';
 
-export const storeGoalData = (data, handler) => (dispatch) => {
-  dispatch({
-    type: STOREGOALDATA,
-    data,
-  });
+import { JOINWHITELIST } from './Home.constants';
+import { notificationAction } from '../CentralNotifications/CentralNotifications.actions';
 
-  handler();
-};
-
-export const storeVideoUrl = (url) => (dispatch) => {
-  dispatch({
-    type: STOREVIDEOURL,
-    url,
-  });
-};
-
-export const storeCampaignData = (data, handler) => (dispatch) => {
-  fetch('https://6ht1jx6yg2.execute-api.us-east-1.amazonaws.com/dev/hlthe/addTemplateInfo', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify(data),
-  })
-    .then((response) => response.json())
-    .then((response) => {
-      dispatch({
-        type: STORECAMPAIGNDATA,
-        response,
-      });
-
-      handler(response.message.id);
-    });
-};
-
-export const getCampaignData = (id) => (dispatch) => {
-  fetch('https://6ht1jx6yg2.execute-api.us-east-1.amazonaws.com/dev/hlthe/getTemplateInfo', {
+export const joinWhitelist = (email) => (dispatch) => {
+  console.log('email', email);
+  fetch(`${urls.baseUrl}${urls.sendEmail}${email}`, {
     method: 'GET',
-    headers: {
-      'Content-Type': 'application/json',
+    body: {
+      email,
     },
   }).then((response) => response.json())
-    .then((response) => {
-      let campaignData = {};
-      response.forEach((res) => {
-        if (res.id === id) {
-          campaignData = res;
-        }
+    .then((res, err) => {
+      console.log('res', res, 'err', err);
+      notificationAction(dispatch, {
+        message: `${email} successfully added to waitlist`,
       });
-
-      dispatch({
-        type: GETCAMPAIGNDATASUCCESS,
-        data: campaignData,
+    })
+    .catch((error) => {
+      console.log('error', error);
+      notificationAction(dispatch, {
+        message: 'Error occured in adding your email to waitlist. Try again',
       });
     });
+  dispatch({
+    type: JOINWHITELIST,
+  });
 };

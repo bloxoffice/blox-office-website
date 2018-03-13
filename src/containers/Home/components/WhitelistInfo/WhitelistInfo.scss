@@ -60,6 +60,10 @@
   text-align: left;
   color: #5b5e6d;
   margin-right: 14px;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .whitelist-btn {
@@ -78,6 +82,10 @@
   text-align: left;
   color: #bf343e;
   cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .pre-sales-label {
@@ -90,6 +98,11 @@
   letter-spacing: normal;
   text-align: left;
   color: #9b9b9b;
+}
+
+.waitlist-error {
+  color: #8f232b;
+  font-size: 12px;
 }
 
 @media only screen
