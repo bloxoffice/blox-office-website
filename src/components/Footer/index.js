@@ -23,7 +23,7 @@ const Footer = () => (
         <div className="footer-link">CONTACT US</div>
       </div>
       <div className="box3">
-        <img src={medium} alt="medium" className="footer-share-icons" />
+        <img href="google.com" src={medium} alt="medium" className="footer-share-icons" />
         <img src={telegram} alt="telegram" className="footer-share-icons" />
         <img src={twitter} alt="twitter" className="footer-share-icons" />
         <img src={facebook} alt="facebook" className="footer-share-icons" />

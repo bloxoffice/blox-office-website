@@ -7,7 +7,7 @@ import './TokenomicsInfo.scss';
 
 const segments = [{
   stat: 'Circulation',
-  val: 40,
+  val: 67,
   color: '#ac92ec',
 }, {
   stat: 'Team & Development',
@@ -15,12 +15,16 @@ const segments = [{
   color: '#a0d468',
 }, {
   stat: 'Bounty',
-  val: 20,
+  val: 2,
   color: '#4fc1e9',
 }, {
   stat: 'Private Sale',
-  val: 20,
+  val: 3,
   color: '#fc6e51',
+}, {
+  stat: 'Mentors',
+  val: 8,
+  color: '#3c63e2',
 }];
 
 let totalLength = 0;
