@@ -1,5 +1,5 @@
 import React from 'react';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 // import PropTypes from 'prop-types';
 
 import bloxOffice from 'assets/images/bloxoffice.png';
@@ -30,7 +30,7 @@ const Header = () => (
         </div>
       </div>
       <div className="link-items login-btn-container">
-        Login/Signup
+        <Link to="/login"><p>Login/Signup</p></Link>
       </div>
     </div>
   </div>

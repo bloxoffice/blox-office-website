@@ -44,6 +44,15 @@
   color: #6d6f7b;
   margin: 17px 0;
   text-align: center;
+
+  & > a {
+    text-decoration: none;
+    color: inherit;
+
+    & > p {
+      margin: 0;
+    }
+  }
 }
 
 .link-items {
