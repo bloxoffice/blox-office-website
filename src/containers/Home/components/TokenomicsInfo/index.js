@@ -78,31 +78,40 @@ StatItem.propTypes = {
   val: PropTypes.number.isRequired,
 };
 
-const TokenomicsInfo = () => (
-  <div className="ti-container">
-    <div className="ti-content">
-      <div className="logo-container">
-        <img src={coins} alt="coins" className="logo" />
-        <p className="tokenomics-txt">tokenomics</p>
+class TokenomicsInfo extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="ti-container" ref={(el) => { this.tokenomicsElement = el; }}>
+        <div className="ti-content">
+          <div className="logo-container">
+            <img src={coins} alt="coins" className="logo" />
+            <p className="tokenomics-txt">tokenomics</p>
+          </div>
+          <div className="donut-container">
+            <Donut
+              segmnts={segments}
+            />
+          </div>
+          <div className="stats-container">
+            {segments.map((segment) => (
+              <StatItem
+                key={segment.stat}
+                color={segment.color}
+                stat={segment.stat}
+                val={segment.val}
+              />
+            ))}
+          </div>
+        </div>
       </div>
-      <div className="donut-container">
-        <Donut
-          segmnts={segments}
-        />
-      </div>
-      <div className="stats-container">
-        {segments.map((segment) => (
-          <StatItem
-            key={segment.stat}
-            color={segment.color}
-            stat={segment.stat}
-            val={segment.val}
-          />
-        ))}
-      </div>
-    </div>
-  </div>
-);
+    );
+  }
+}
 
 TokenomicsInfo.defaultProps = {};
 

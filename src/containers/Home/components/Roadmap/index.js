@@ -19,35 +19,44 @@ const milestones = [{
   event: 'BLOXOFFICE 2.0',
 }];
 
-const Roadmap = () => (
-  <div className="roadmap-container">
-    <h1 className="roadmap-heading">ROADMAP</h1>
-    <div className="roadmap-content">
-      <svg width="100%" height="80px">
-        <line
-          x1="10%"
-          x2="90%"
-          y1="37"
-          y2="37"
-          stroke="#ffc80a"
-          strokeWidth={3}
-        />
-        {milestones.map((stone, i) => (
-          <g key={stone.date}>
-            <circle
-              cx={`${(i * 20) + 10}%`}
-              cy="37px"
-              r="15px"
-              fill={i === 0 ? '#bf343e' : '#ffc80a'}
+class Roadmap extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="roadmap-container" ref={(el) => { this.roadmapElement = el; }}>
+        <h1 className="roadmap-heading">ROADMAP</h1>
+        <div className="roadmap-content">
+          <svg width="100%" height="80px">
+            <line
+              x1="10%"
+              x2="90%"
+              y1="37"
+              y2="37"
+              stroke="#ffc80a"
+              strokeWidth={3}
             />
-            <text x={`${(i * 20) + 10}%`} y="15px" className="stone-text">{stone.date}</text>
-            <text x={`${(i * 20) + 10}%`} y="70px" className="stone-text">{stone.event}</text>
-          </g>
-        ))}
-      </svg>
-    </div>
-  </div>
-);
+            {milestones.map((stone, i) => (
+              <g key={stone.date}>
+                <circle
+                  cx={`${(i * 20) + 10}%`}
+                  cy="37px"
+                  r="15px"
+                  fill={i === 0 ? '#bf343e' : '#ffc80a'}
+                />
+                <text x={`${(i * 20) + 10}%`} y="15px" className="stone-text">{stone.date}</text>
+                <text x={`${(i * 20) + 10}%`} y="70px" className="stone-text">{stone.event}</text>
+              </g>
+            ))}
+          </svg>
+        </div>
+      </div>
+    );
+  }
+}
 
 Roadmap.defaultProps = {};
 

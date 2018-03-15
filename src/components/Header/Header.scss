@@ -57,6 +57,18 @@
 
 .link-items {
   cursor: pointer;
+
+  .link-btn {
+    border: none;
+    margin: 0;
+    outline: 0;
+    font-size: inherit;
+    color: inherit;
+
+    &:focus {
+      outline: none;
+    }
+  }
 }
 
 @media only screen

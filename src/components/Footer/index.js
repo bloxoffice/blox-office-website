@@ -1,9 +1,9 @@
 import React from 'react';
 
-import bloxofficeFooter from 'assets/images/bloxoffice-footer.png';
-import facebook from 'assets/images/facebook.png';
-import twitter from 'assets/images/twitter.png';
-import youtube from 'assets/images/youtube.png';
+import bloxofficeFooter from 'assets/images/bloxoffice-footer@3x.png';
+import facebook from 'assets/images/facebook@3x.png';
+import twitter from 'assets/images/twitter@3.png';
+import youtube from 'assets/images/youtube@3x.png';
 import medium from 'assets/images/medium.png';
 import telegram from 'assets/images/telegram.png';
 

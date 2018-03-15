@@ -48,19 +48,28 @@ Member.propTypes = {
   member: PropTypes.object.isRequired,
 };
 
-const Team = () => (
-  <div className="team-container">
-    <p className="team-heading">OUR TEAM</p>
-    <div className="team-content">
-      {members.map((member) => (
-        <Member
-          key={member.alt}
-          member={member}
-        />
-      ))}
-    </div>
-  </div>
-);
+class Team extends React.Component {
+  constructor() {
+    super();
+    this.state = {};
+  }
+
+  render() {
+    return (
+      <div className="team-container" ref={(el) => { this.teamElement = el; }}>
+        <p className="team-heading">OUR TEAM</p>
+        <div className="team-content">
+          {members.map((member) => (
+            <Member
+              key={member.alt}
+              member={member}
+            />
+          ))}
+        </div>
+      </div>
+    );
+  }
+}
 
 Team.defaultProps = {};
 

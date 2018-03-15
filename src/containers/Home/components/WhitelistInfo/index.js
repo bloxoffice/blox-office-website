@@ -48,7 +48,7 @@ class WhitelistInfo extends React.Component {
   render() {
     const { emailError } = this.state;
     return (
-      <div className="wli-container">
+      <div className="wli-container" ref={(el) => { this.whiteListElement = el; }}>
         <div className="wli-content">
           <div className="wli-logo-container">
             <img src={bloxofficeHero} alt="bloxoffice-Hero" className="bloxoffice-hero" />
