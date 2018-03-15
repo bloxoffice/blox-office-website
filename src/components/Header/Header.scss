@@ -6,7 +6,7 @@
 
 .header-content {
   display: grid;
-  grid-template-columns: auto auto 132px;
+  grid-template-columns: auto auto;
   width: 81%;
   margin: auto;
   padding: 17px 0;
@@ -19,7 +19,7 @@
 
 .links-container {
   display: inline-grid;
-  grid-template-columns: auto auto auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
   padding: 25px 0;
   font-size: 15px;
   font-weight: 500;
