@@ -5,6 +5,7 @@
   grid-template-columns: auto auto;
   justify-content: space-around;
   padding: 44px;
+  margin-top: 4px;
 }
 
 .video-player {
@@ -42,6 +43,11 @@
 
 .download-player-container {
   padding-top: 100px;
+}
+
+.btn-link-text {
+  font-size: inherit;
+  text-decoration: none;
 }
 
 @media only screen

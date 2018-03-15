@@ -17,7 +17,7 @@
 
 .team-content {
   display: grid;
-  grid-template-columns: 355px 355px 355px;
+  grid-template-columns: 30% 30% 30%;
   width: 81%;
   margin: auto;
   justify-content: space-between;
@@ -78,6 +78,7 @@
   color: #6d6f7b;
   font-family: WorkSansLight, sans-serif;
   margin: 0 0 30px;
+  min-height: 75px;
 }
 
 .member-email {
@@ -117,5 +118,6 @@ and (-webkit-min-device-pixel-ratio: 2) {
 
   .member-content {
     padding-bottom: 0;
+    height: unset;
   }
 }

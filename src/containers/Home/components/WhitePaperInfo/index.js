@@ -19,9 +19,17 @@ class WhitePaperInfo extends React.Component {
           />
         </div>
         <div className="download-player-container">
-          <button className="download-btn">
-            <span className="download-btn-text">DOWNLOAD THE WHITE PAPER</span>
-            <span className="fa fa-caret-down download-btn-icon" />
+          <button
+            className="download-btn"
+          >
+            <a
+              className="btn-link-text"
+              href="https://s3.amazonaws.com/bloxoffice/bloxoffice_whitepaper.pdf"
+              download
+            >
+              <span className="download-btn-text">DOWNLOAD THE WHITE PAPER</span>
+              <span className="fa fa-caret-down download-btn-icon" />
+            </a>
           </button>
         </div>
       </div>
