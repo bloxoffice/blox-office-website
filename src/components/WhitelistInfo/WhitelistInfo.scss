@@ -1,0 +1,140 @@
+.wli-container {
+  height: 720px;
+}
+
+.wli-content {
+  display: grid;
+  grid-template-columns: auto auto;
+  width: 81%;
+  margin: auto;
+}
+
+.wli-logo-container {
+  padding: 100px 0 150px;
+}
+
+.wli-info {
+  padding: 130px 0 200px;
+}
+
+.bloxoffice-hero {
+  height: 480px;
+  width: 652px;
+}
+
+.bloxoffice-title {
+  width: 404px;
+  max-width: 404px;
+  height: 66px;
+}
+
+.decentralised-movie {
+  width: 410px;
+  max-width: 410px;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5e6d;
+  text-transform: uppercase;
+}
+
+.email-form {}
+
+.email-input {
+  display: inline-block;
+  width: 220px;
+  height: 17px;
+  border-radius: 4px;
+  border: solid 1px #ebebeb;
+  padding: 15px 17px;
+  font-size: 15px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #5b5e6d;
+  margin-right: 14px;
+}
+
+.whitelist-btn {
+  display: inline-block;
+  width: 140px;
+  height: 47px;
+  border-radius: 4px;
+  border: solid 1px #bf343e;
+  /*padding: 16px 30px; */
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.29;
+  letter-spacing: normal;
+  text-align: left;
+  color: #bf343e;
+  cursor: pointer;
+}
+
+.pre-sales-label {
+  margin: 45px 15px 0;
+  font-size: 22px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #9b9b9b;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .wli-container {
+    height: 1300px;
+  }
+
+  .wli-content {
+    grid-template-columns: auto;
+    width: 100%;
+  }
+
+  .bloxoffice-hero {
+    width: 100%;
+  }
+
+  .bloxoffice-title {
+    width: 90%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .email-input {
+    width: 80%;
+    margin: 0 auto 10px;
+    display: block;
+  }
+
+  .whitelist-btn {
+    margin-left: 8%;
+  }
+
+  .decentralised-movie {
+    width: 90%;
+    margin: 0 auto 10px;
+  }
+
+  .wli-logo-container {
+    padding: 30px 0;
+  }
+
+  .wli-info {
+    padding: 100px 0;
+  }
+}

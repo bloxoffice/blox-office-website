@@ -1,0 +1,67 @@
+.pli-container {
+  background-color: #bf343e;
+  box-shadow: 0 -1px 0 0 #ebebeb;
+}
+
+.pli-content {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.pli-items {
+  border: solid 1px #8f232b;
+  padding: 86px 100px 86px 130px;
+  display: inline-grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+.pli-item2 {
+  grid-column-end: span 3;
+  margin-left: 30px;
+}
+
+.pli-title {
+  margin-top: 0;
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffd00b;
+  text-transform: uppercase;
+}
+
+.pli-desc {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.36;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ffffff;
+  font-family: WorkSansLight, sans-serif;
+  margin: 0;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .pli-content {
+    grid-template-columns: auto;
+  }
+
+  .pli-items {
+    padding: 56px 5%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+  }
+
+  .pli-item2 {
+    grid-column-end: span 2;
+  }
+}

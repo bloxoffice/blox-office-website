@@ -1,0 +1,111 @@
+.App{
+  text-align: center;
+}
+
+.App-logo {
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
+}
+
+.App-header {
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.About-Whitepaper-Tok {
+  width: 432px;
+  height: 18px;
+  font-family: WorkSans;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6d6f7b;
+}
+
+.ursNmHdr {
+  width: 90px;
+  height: 16px;
+  font-family: WorkSans;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: center;
+  color: #000000;
+}
+
+.BitmapHdr {
+  width: 40px;
+  height: 40px;
+}
+.sign_up {
+  width: 132px;
+  height: 36px;
+  border-radius: 5px;
+  border: solid 1px #323648;
+}
+
+.App-body {
+  background-color: #333;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-footer {
+  background-color: #444;
+  height: 150px;
+  padding: 20px;
+  color: white;
+}
+
+.App-title {
+  font-size: 1.5em;
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.menu-Pad {
+  padding-left: 5px;
+  padding-right: 15px;
+}
+
+.menu-img {
+  padding-left: 80px;
+  padding-right: 40px;
+}
+
+.footer{
+  display: -webkit-box;
+    text-align: right;
+}
+
+.footer-pad{
+  padding-left: 10px;
+  font-weight: lighter;
+  font-size: small;
+}
+
+.footer_logo{
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#MainBody{
+  height: -webkit-fill-available;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

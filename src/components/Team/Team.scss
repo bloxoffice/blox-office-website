@@ -1,0 +1,121 @@
+.team-container {
+  background-color: #fcfcfc;
+  border: solid 1px rgba(151, 151, 151, 0.09);
+}
+
+.team-heading {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #453937;
+  margin: 30px 0;
+}
+
+.team-content {
+  display: grid;
+  grid-template-columns: 355px 355px 355px;
+  width: 81%;
+  margin: auto;
+  justify-content: space-between;
+  margin-bottom: 70px;
+}
+
+.member-photo {
+  width: 100%;
+  max-width: 355px;
+  height: 320px;
+  display: block;
+  margin: auto;
+}
+
+.member-content {
+  padding: 50px 55px 70px;
+  background-color: #ffffff;
+  border: solid 1px rgba(151, 151, 151, 0.1);
+  text-align: left;
+  width: calc(100% - 112px);
+  max-width: 244px;
+  margin: auto;
+  height: 236px;
+}
+
+.member-name {
+  font-size: 22px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #212121;
+  margin-bottom: 8px;
+}
+
+.member-role {
+  font-size: 12px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: 2.9px;
+  color: #9fa3a7;
+  font-family: WorkSansLight, sans-serif;
+  margin: 0 0 30px;
+}
+
+.member-desc {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.79;
+  letter-spacing: normal;
+  text-align: left;
+  color: #6d6f7b;
+  font-family: WorkSansLight, sans-serif;
+  margin: 0 0 30px;
+}
+
+.member-email {
+  font-size: 14px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #292929;
+  font-family: WorkSansLight, sans-serif;
+  margin: 0 0 70px;
+}
+
+.mail-icon {
+  margin-right: 10px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .team-content {
+    grid-template-columns: auto;
+    width: 90%;
+    justify-content: space-evenly;
+  }
+
+  //.member-photo {
+  //  width: 100%;
+  //}
+
+  .member-container {
+    margin-bottom: 10px;
+  }
+
+  .member-content {
+    padding-bottom: 0;
+  }
+}

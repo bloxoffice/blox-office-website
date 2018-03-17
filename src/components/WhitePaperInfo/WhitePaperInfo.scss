@@ -1,0 +1,63 @@
+.whitepaper-info {
+  height: 350px;
+  background-color: #bf343e;
+  display: grid;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  padding: 44px;
+}
+
+.video-player {
+  width: 477px;
+  height: 263px;
+  position: relative;
+}
+
+.download-btn {
+  width: 336px;
+  height: 57px;
+  border-radius: 4px;
+  border: solid 1px #ffffff;
+  padding: 20px 30px 20px 50px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.download-btn-text {
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #f9cb31;
+  margin-right: 10px;
+}
+
+.download-btn-icon {
+  color: #FFFFFF;
+  font-size: 16px;
+}
+
+.download-player-container {
+  padding-top: 100px;
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .whitepaper-info {
+    grid-template-columns: auto;
+  }
+
+  .video-player {
+    width: 90%;
+    margin: auto;
+  }
+
+  .download-player-container {
+    padding-top: 30px;
+  }
+}

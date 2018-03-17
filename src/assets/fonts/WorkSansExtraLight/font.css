@@ -1,0 +1,12 @@
+@font-face {
+  font-family: 'WorkSansExtraLight';
+  src: url('WorkSans-ExtraLight.eot');
+  src: url('WorkSans-ExtraLight.woff2') format('woff2'),
+       url('WorkSans-ExtraLight.woff') format('woff'),
+       url('WorkSans-ExtraLight.ttf') format('truetype'),
+       url('WorkSans-ExtraLight.svg#WorkSans-ExtraLight') format('svg'),
+       url('WorkSans-ExtraLight.eot?#iefix') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
