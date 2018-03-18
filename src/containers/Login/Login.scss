@@ -49,11 +49,17 @@
   font-stretch: normal;
   line-height: normal;
   letter-spacing: normal;
-  text-align: left;
   color: #ffffff;
   display: block;
   margin: 11px auto;
   text-transform: uppercase;
+  text-align: center;
+  min-width: 110px;
+  cursor: pointer;
+
+  &:focus {
+    outline: none;
+  }
 }
 
 .login-redirect {
@@ -70,5 +76,15 @@
     font-weight: bold;
     color: #bf343e;
     text-decoration: none;
+  }
+}
+
+@media only screen
+and (min-device-width: 320px)
+and (max-device-width: 1200px)
+and (-webkit-min-device-pixel-ratio: 2) {
+  .login-inputs-container {
+    grid-template-columns: 80%;
+    justify-content: center;
   }
 }

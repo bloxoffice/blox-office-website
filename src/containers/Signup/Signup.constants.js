@@ -42,5 +42,5 @@ export const initialState = {
   isLoading: false,
 };
 
-export const SIGNINREQUEST = 'SIGNINREQUEST';
-export const SIGNINSUCCESS = 'SIGNINSUCCESS';
+export const SIGNUPREQUEST = 'SIGNUPREQUEST';
+export const SIGNUPSUCCESS = 'SIGNUPSUCCESS';

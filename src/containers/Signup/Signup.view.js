@@ -6,7 +6,7 @@ import PropTypes from 'prop-types';
 import InputFields from 'components/InputFields';
 
 import { fields } from './Signup.constants';
-import { signInUser } from './Signup.actions';
+import { signupUser } from './Signup.actions';
 import { SignupSelector } from './Signup.redux';
 
 import './Signup.scss';
@@ -49,7 +49,7 @@ class Signup extends React.Component {
     };
   };
 
-  handleSignin = () => {
+  handleSignup = () => {
     const {
       isValid,
       errors,
@@ -66,7 +66,7 @@ class Signup extends React.Component {
           password: this.state.password,
         };
 
-        this.props.signInUser(payload);
+        this.props.signupUser(payload);
       });
     } else {
       this.setState({
@@ -101,7 +101,7 @@ class Signup extends React.Component {
         <button
           className="signup-btn"
           type="submit"
-          onClick={this.handleSignin}
+          onClick={this.handleSignup}
         >
           {isLoading && (
             <i className="fa fa-spinner fa-spin" />
@@ -121,12 +121,12 @@ class Signup extends React.Component {
 Signup.defaultProps = {};
 
 Signup.propTypes = {
-  signInUser: PropTypes.func.isRequired,
+  signupUser: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
 };
 
 const mapDispatchToProps = {
-  signInUser,
+  signupUser,
 };
 
 export default connect(SignupSelector, mapDispatchToProps)(Signup);

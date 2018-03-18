@@ -1,15 +1,15 @@
-import { SIGNINREQUEST, SIGNINSUCCESS } from './Signup.constants';
+import { SIGNUPREQUEST, SIGNUPSUCCESS } from './Signup.constants';
 
-export const signInUser = (payload) => (dispatch) => {
+export const signupUser = (payload) => (dispatch) => {
   dispatch({
-    type: SIGNINREQUEST,
+    type: SIGNUPREQUEST,
   });
 
   console.log('payload', payload);
 
   setTimeout(() => {
     dispatch({
-      type: SIGNINSUCCESS,
+      type: SIGNUPSUCCESS,
     });
   }, 30000);
 };

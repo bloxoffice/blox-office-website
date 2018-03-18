@@ -1,8 +1,8 @@
 import { createStructuredSelector } from 'reselect';
 import {
   initialState,
-  SIGNINSUCCESS,
-  SIGNINREQUEST,
+  SIGNUPSUCCESS,
+  SIGNUPREQUEST,
 } from './Signup.constants';
 
 export const SignupSelector = createStructuredSelector({
@@ -11,12 +11,12 @@ export const SignupSelector = createStructuredSelector({
 
 export const SignupReducer = (state = initialState, action) => {
   switch (action.type) {
-    case SIGNINREQUEST:
+    case SIGNUPREQUEST:
       return {
         ...state,
         isLoading: true,
       };
-    case SIGNINSUCCESS:
+    case SIGNUPSUCCESS:
       return {
         ...state,
         isLoading: false,
