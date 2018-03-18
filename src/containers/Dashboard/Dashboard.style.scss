@@ -1,0 +1,187 @@
+.dashboard-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fcfbfc;
+
+  .bbtc-details-container {
+    width: 80%;
+    margin: 40px auto;
+    display: grid;
+    grid-template-columns: 45% 45%;
+    justify-content: space-between;
+
+    .bbtc-value-container {
+      background-color: #ffffff;
+      height: 100px;
+      border-radius: 4px;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.06);
+      display: grid;
+      grid-template-columns: 50% 50%;
+      padding: 40px;
+
+      .bbtc-value-inner1 {
+        display: grid;
+        align-items: center;
+      }
+    }
+
+    .bbtc-ether-details-container {
+      height: 100px;
+      border-radius: 4px;
+      background-color: #ffffff;
+      box-shadow: 0 0 4px 0 rgba(0, 0, 0, 0.06);
+      padding: 40px;
+    }
+
+    .dollar-val {
+      margin-left: 10px;
+      font-family: WorkSans-SemiBold, sans-serif;
+      font-size: 32px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #2e2927;
+    }
+
+    .dollar-val1 {
+      margin-left: 10px;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #27272e;
+    }
+
+    .dollar-label {
+      font-family: WorkSansRegular, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      text-align: center;
+      color: #27272e;
+      position: relative;
+      top: -4px;
+    }
+
+    .dollar-desc {
+      text-align: center;
+    }
+
+    .dollar-desc1 {
+      padding: 0 10%;
+    }
+
+    .bbtc-transfer-label {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #6e757d;
+    }
+
+    .bbtc-transfer-code {
+      font-size: 18px;
+      font-weight: 500;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: normal;
+      letter-spacing: normal;
+      color: #27272e;
+    }
+  }
+
+  .transaction-history-header {
+    width: 80%;
+    margin: 40px auto;
+    font-size: 20px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #323648;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  .transactions-table-container {
+    width: 80%;
+    margin: 65px auto;
+
+    .transactions-table {
+      width: 100%;
+      border-spacing:0;
+      border-collapse: collapse;
+
+      th {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #999999;
+        font-family: WorkSansLight, sans-serif;
+        text-align: center;
+        border: none;
+
+        &:first-child {
+          text-align: left;
+        }
+      }
+
+      td {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #000000;
+        border: none;
+
+        &:first-child {
+          text-align: left;
+        }
+      }
+
+      .transaction-row {
+        height: 50px;
+        border-radius: 4px;
+        background-color: #ffffff;
+        margin: 8px 0;
+      }
+
+      .transaction-header-row {
+        height: 50px;
+        border-radius: 4px;
+        margin: 8px 0;
+      }
+
+      .pending-msg {
+        font-size: 14px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: left;
+        color: #bf343e;
+      }
+    }
+  }
+}
+
+td, th    { page-break-inside:avoid; page-break-after:auto }
