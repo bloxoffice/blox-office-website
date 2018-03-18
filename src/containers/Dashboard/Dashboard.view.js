@@ -33,6 +33,8 @@ class Dashboard extends Component {
     this.state = {};
   }
 
+  handleElScroll = () => {};
+
   render() {
     return (
       <div className="dashboard-container">

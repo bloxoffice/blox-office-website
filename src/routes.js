@@ -4,6 +4,7 @@ import Home from 'containers/Home';
 import Login from 'containers/Login';
 import Signup from 'containers/Signup';
 import Dashboard from 'containers/Dashboard';
+import ChangePassword from 'containers/ChangePassword';
 
 const Router = () => (
   <Switch>
@@ -11,6 +12,7 @@ const Router = () => (
     <Route exact path="/login" component={Login} />
     <Route exact path="/signup" component={Signup} />
     <Route exact path="/dashboard" component={Dashboard} />
+    <Route exact path="/changepassword" component={ChangePassword} />
   </Switch>
 );
 
