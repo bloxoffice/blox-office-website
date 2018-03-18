@@ -24,12 +24,13 @@ export const messages = {
   password: 'Password should have min 8 characters',
   number: 'Invalid Number',
   required: 'is required',
+  text: 'Invalid field',
 };
 
 export const validateTextInput = (name, placeholder, required, validate, value, type) => {
   if (validate) {
     if (required) {
-      if (!value) {
+      if (!value || value === '') {
         return { isValid: false, message: `${placeholder} ${messages.required}` };
       }
       const check = fieldTypes[type];

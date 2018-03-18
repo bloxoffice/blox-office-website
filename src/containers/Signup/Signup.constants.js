@@ -1,31 +1,46 @@
+import { validateTextInput } from 'utils/validations';
+
 export const fields = [{
   name: 'firstName',
   label: 'Frist Name',
   required: true,
-  validate: () => {},
+  type: 'text',
+  validate: (val) => validateTextInput('firstName', 'Frist Name', true, true, val, 'text'),
 }, {
   name: 'lastName',
   label: 'Last Name',
   required: true,
-  validate: () => {},
+  type: 'text',
+  validate: (val) => validateTextInput('lastName', 'Last Name', true, true, val, 'text'),
 }, {
   name: 'emailAddress',
   label: 'Email Address',
   required: true,
-  validate: () => {},
+  type: 'email',
+  validate: (val) => validateTextInput('emailAddress', 'Email Address', true, true, val, 'email'),
 }, {
   name: 'phone',
   label: 'Phone',
   required: true,
-  validate: () => {},
+  type: 'tel',
+  validate: (val) => validateTextInput('phone', 'Phone', true, true, val, 'phone'),
 }, {
   name: 'password',
   label: 'Password',
   required: true,
-  validate: () => {},
+  type: 'password',
+  validate: (val) => validateTextInput('password', 'Password', true, true, val, 'password'),
 }, {
   name: 'confirmPassword',
   label: 'Confirm Password',
   required: true,
-  validate: () => {},
+  type: 'password',
+  validate: (val) => validateTextInput('confirmPassword', 'Confirm Password', false, false, val, 'password'),
 }];
+
+export const initialState = {
+  isLoading: false,
+};
+
+export const SIGNINREQUEST = 'SIGNINREQUEST';
+export const SIGNINSUCCESS = 'SIGNINSUCCESS';
