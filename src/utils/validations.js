@@ -25,6 +25,7 @@ export const messages = {
   number: 'Invalid Number',
   required: 'is required',
   text: 'Invalid field',
+  date: 'Invalid date',
 };
 
 export const validateTextInput = (name, placeholder, required, validate, value, type) => {

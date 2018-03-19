@@ -5,6 +5,7 @@ import Login from 'containers/Login';
 import Signup from 'containers/Signup';
 import Dashboard from 'containers/Dashboard';
 import ChangePassword from 'containers/ChangePassword';
+import Profile from 'containers/Profile';
 
 const Router = () => (
   <Switch>
@@ -13,6 +14,7 @@ const Router = () => (
     <Route exact path="/signup" component={Signup} />
     <Route exact path="/dashboard" component={Dashboard} />
     <Route exact path="/changepassword" component={ChangePassword} />
+    <Route exact path="/profile" component={Profile} />
   </Switch>
 );
 
