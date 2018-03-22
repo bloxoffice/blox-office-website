@@ -1,0 +1,274 @@
+.business-plan {
+  padding-top: 50px;
+  padding-bottom: 90px;
+  background-color: #f7fcfc;
+
+  .container {
+    width: 81%;
+    margin: auto;
+
+    .plan-title {
+      width: 370px;
+      height: 95px;
+      line-height: 95px;
+      margin: 0 auto;
+      font-size: 22px;
+      color: #2e3035;
+      font-family: WorkSansMedium, sans-serif;
+      text-align: center;
+      border-radius: 5px;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+      background-color: #ffffff;
+      border: solid 1px #deecec;
+      position: relative;
+
+      &:after {
+        position: absolute;
+        content: '';
+        width: 30px;
+        height: 30px;
+        background-color: #dfdfdf;
+        border: solid 4px #ffffff;
+        bottom: -15px;
+        left: 50%;
+        -webkit-transform: translateX(-50%);
+        -moz-transform: translateX(-50%);
+        -o-transform: translateX(-50%);
+        -ms-transform: translateX(-50%);
+        transform: translateX(-50%);
+        border-radius: 50%;
+      }
+    }
+
+    .user-groups {
+      box-shadow: 0 10px 40px 0 rgba(211, 228, 230, 0.9);
+      background-color: #f7fcfc;
+      border: solid 2px #ffd607;
+      position: relative;
+    }
+
+    .user-groups:before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 106px;
+      border: 1.5px solid #ffc400;
+      top: -108px;
+      left: 27px;
+    }
+
+    .plan-circles {
+      width: 60px;
+      height: 60px;
+      padding-top: 8px;
+      padding-left: 4px;
+      margin: 120px auto;
+      border-radius: 50%;
+      position: relative;
+      border: solid 1px #deecec;
+    }
+
+    .plan-circles:before {
+      position: absolute;
+      content: '';
+      width: 2px;
+      height: 106px;
+      border: 1.5px solid #e4eded;
+      top: -108px;
+      left: 27px;
+    }
+
+    .plan-details {
+      position: absolute;
+      top: -35px;
+      left: 100px;
+      width: 360px;
+      padding: 30px;
+      padding-bottom: 20px;
+      border-radius: 5px;
+      background-color: #ffd00b;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+    }
+
+    .plan-details:before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      top: 48px;
+      left: -12px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 12px solid #ffd00b;
+    }
+
+    .plan-name {
+      color: #2e3035;
+      font-size: 22px;
+      font-family: WorkSansMedium, sans-serif;
+    }
+
+    .details {
+      color: #546066;
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+
+    .video-playlist .plan-details {
+      left: auto;
+      right: 100px;
+      background-color: #ffffff;
+      border: solid 1px #deecec;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+    }
+
+    .video-playlist .plan-details:before {
+      left: auto;
+      right: -12px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid #ffffff;
+      border-right: 0;
+    }
+
+    .video-playlist {
+      padding-top: 7px;
+      padding-left: 7px;
+    }
+    .video-playlist img, .movie-ticket img {
+      width: 45px;
+    }
+    .movie-ticket {
+      padding-top: 14px;
+      padding-left: 7px;
+    }
+    .refund img {
+      width: auto;
+      height: 25px;
+    }
+    .refund {
+      padding-top: 17px;
+      padding-left: 17px;
+    }
+    .plan-details {
+      position: absolute;
+      top: -35px;
+      left: 100px;
+      width: 360px;
+      padding: 30px;
+      padding-bottom: 20px;
+      border-radius: 5px;
+      background-color: #ffd00b;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+    }
+    .plan-details:before {
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 0;
+      top: 48px;
+      left: -12px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-right: 12px solid #ffd00b;
+    }
+    .plan-name {
+      color: #2e3035;
+      font-size: 22px;
+      font-family: WorkSansMedium, sans-serif;
+    }
+    .details {
+      color: #546066;
+      font-size: 15px;
+      margin-bottom: 0;
+    }
+    .video-playlist .plan-details {
+      left: auto;
+      right: 100px;
+      background-color: #ffffff;
+      border: solid 1px #deecec;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+    }
+    .video-playlist .plan-details:before {
+      left: auto;
+      right: -12px;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 12px solid #ffffff;
+      border-right: 0;
+    }
+    .movie-ticket .plan-details {
+      background-color: #ffffff;
+      border: solid 1px #deecec;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+    }
+    .movie-ticket .plan-details:before {
+      border-right: 12px solid #ffffff;
+    }
+
+    .plan-circles img {
+      width: 48px;
+    }
+
+    .property-platform {
+      width: 825px;
+      margin: 0 auto;
+      border-radius: 5px;
+      background-color: #ffffff;
+      border: solid 1px #deecec;
+      box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
+    }
+    .platform {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      padding-left: 43px;
+    }
+    .platform img {
+      width: 60px;
+    }
+    .platform-detail {
+      padding-left: 30px;
+      padding-right: 100px;
+    }
+    .platform-detail h3 {
+      font-size: 20px;
+      color: #2e3035;
+      font-family: WorkSansMedium, sans-serif;
+    }
+    .platform-detail p {
+      color: #546066;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .business-plan {
+    padding-top: 50px;
+    padding-bottom: 90px;
+  }
+  .property-platform {
+    width: 100%;
+  }
+}
+
+@media (max-width:767px) {
+  .plan-title {
+    width: 100%;
+  }
+  .property-platform {
+    width: 100%;
+  }
+  .platform {
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  .platform .img-responsive {
+    display: inline-block;
+  }
+  .platform-detail {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}

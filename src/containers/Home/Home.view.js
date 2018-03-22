@@ -7,7 +7,8 @@ import scrollToComponent from 'react-scroll-to-component';
 import Header from 'components/Header';
 import Footer from 'components/Footer';
 import WhitelistInfo from './components/WhitelistInfo';
-import PlatformInfo from './components/PlatformInfo';
+import BusinessPlan from './components/BusinessPlan';
+// import PlatformInfo from './components/PlatformInfo';
 import WhitePaperInfo from './components/WhitePaperInfo';
 import TokenomicsInfo from './components/TokenomicsInfo';
 // import Roadmap from './components/Roadmap';
@@ -57,7 +58,8 @@ class Home extends React.Component {
           handleJoinWhitelist={this.props.joinWhitelist}
           ref={(el) => { this.whiteListInfo = el; }}
         />
-        <PlatformInfo />
+        <BusinessPlan />
+        {/* <PlatformInfo /> */}
         <WhitePaperInfo ref={(el) => { this.whitepaperInfo = el; }} />
         <TokenomicsInfo ref={(el) => { this.tokenomicsInfo = el; }} />
         {/* <Roadmap ref={(el) => { this.roadmap = el; }} /> */}
