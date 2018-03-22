@@ -22,19 +22,27 @@
   height: 58px;
 }
 
-.links-container {
-  display: inline-grid;
-  grid-template-columns: auto auto auto auto;
-  padding: 10px 0;
-  font-size: 15px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  text-align: left;
-  color: #6d6f7b;
-  align-items: center;
+.menu-links-container {
+  -webkit-transition: height 2s ease-in-out; /* For Safari 3.1 to 6.0 */
+  transition: height 2s ease-in-out;
+  display: grid;
+  justify-content: end;
+
+  .links-container {
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto;
+    grid-column-gap: 10px;
+    padding: 10px 0;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #6d6f7b;
+    align-items: center;
+  }
 }
 
 .login-btn-container {
@@ -82,6 +90,11 @@
   }
 }
 
+
+.menu-icon-btn {
+  display: none;
+}
+
 @media only screen
 and (min-width: 320px)
 and (max-width: 820px)
@@ -94,13 +107,36 @@ and (-webkit-min-device-pixel-ratio: 2) {
     grid-template-columns: auto;
   }
 
-  .links-container {
-    grid-template-columns: auto;
+  .menu-links-container {
     height: 0;
+    overflow: hidden;
+    justify-content: left;
 
+    .links-container {
+      grid-template-columns: auto;
+    }
+
+    &.open {
+      height: 120px;
+    }
   }
 
   .link-items {
     margin-bottom: 10px;
+  }
+
+  .menu-icon-btn {
+    display: inline-block;
+    float: right;
+    background: transparent;
+    border: none;
+    outline: none;
+
+    .menu-icon {
+      color: #bf343e;
+      font-size: 26px !important;
+      margin-top: 15px;
+      cursor: pointer;
+    }
   }
 }
