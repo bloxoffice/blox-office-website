@@ -99,8 +99,8 @@
 }
 
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 1200px)
+and (min-width: 320px)
+and (max-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .team-content {
     grid-template-columns: auto;

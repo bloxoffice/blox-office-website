@@ -105,9 +105,15 @@
   font-size: 12px;
 }
 
+.timer-container {
+  width: 80%;
+  max-width: 350px;
+  margin: auto;
+}
+
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 1200px)
+and (min-width: 320px)
+and (max-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .wli-container {
     height: 1300px;

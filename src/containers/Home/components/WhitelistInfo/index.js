@@ -72,7 +72,7 @@ class WhitelistInfo extends React.Component {
               <button onClick={this.handleJoinWhitelist} className="whitelist-btn">JOIN WAITLIST</button>
               <p className="waitlist-error">{emailError}</p>
             </div>
-            <div>
+            <div className="timer-container">
               <p className="pre-sales-label">Pre-sales starts in</p>
               <Timer date="04/15/2018 22:00:00" />
             </div>
