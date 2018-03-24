@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import bloxofficeHero from 'assets/images/bloxoffice-hero.png';
-import bloxofficeTitle from 'assets/images/bloxoffice-title.png';
+import bloxofficeHero from 'assets/images/movie-making.png';
+import bloxofficeTitle from 'assets/images/title.png';
 import { validateTextInput } from 'utils/validations';
 
 import Timer from '../../../../components/Timer/index';

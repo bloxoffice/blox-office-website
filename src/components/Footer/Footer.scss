@@ -58,6 +58,7 @@ and (max-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .footer-inner {
     grid-template-columns: auto;
+    justify-content: center;
   }
 
   .box2 {
