@@ -1,41 +1,169 @@
-.roadmap-container {
-  background-color: #FFFFFF;
-  border: solid 1px rgba(151, 151, 151, 0.09);
-}
-
-.roadmap-heading {
-  text-align: center;
-  font-size: 24px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #453937;
-  margin: 30px 0;
-}
-
-.roadmap-content {
+.container {
   width: 81%;
-  margin: 70px auto;
+  margin: auto;
+}
+
+.roadmap {
+  height: 400px;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 1.42857143;
+}
+.roadmap h3 {
+  color: #453937;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 75px;
+  font-family: worksansMedium, sans-serif;
+  margin-top: 20px;
+  font-weight: 500;
+  line-height: 1.1;
+}
+.mapping {
+  padding-left: 0;
+  list-style: none;
+}
+.mapping li {
+  width: 20%;
+  height: 30px;
+  float: left;
   position: relative;
 }
-
-.stone-text {
-  font-size: 14px;
-  fill: #6d6f7b;
-  text-anchor: middle;
+.mapping li:before {
+  position: absolute;
+  content: '';
+  width: 30px;
+  height: 30px;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  border-radius: 50%;
+  background-color: #ffc80a;
+  box-sizing: border-box;
+  z-index: 2;
+}
+.mapping li.current:before {
+  background-color: #bf343e;
+  border: 5px solid #ffc80a;
+}
+.mapping li:after {
+  position: absolute;
+  content: '';
+  background-color: #ffc80a;
+  width: 210px;
+  height: 2px;
+  left: 130px;
+  top: 14px;
+  z-index: 1;
+  box-sizing: border-box;
+}
+.mapping li:last-child:after {
+  height: 0;
+}
+.tag1, .tag2 {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #6d6f7b;
+  font-family: worksansMedium, sans-serif;
+  box-sizing: border-box;
+}
+.tag1 {
+  top: -25px;
+}
+.tag2 {
+  bottom: -25px;
+}
+.current .tag1, .current .tag2 {
+  color: #212121;
 }
 
-@media only screen
-and (min-width: 320px)
-and (max-width: 1200px)
-and (-webkit-min-device-pixel-ratio: 2) {
-  .roadmap-content {
-    width: 100%;
+.visible-xs {
+  display: none!important;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .hidden-xs {
+    display: none!important;
   }
 
-  .stone-text {
-    font-size: 6px;
+  .visible-xs {
+    display: block!important;
+  }
+
+  .roadmap {
+    height: auto;
+    padding-top: 20px;
+    padding-bottom: 70px;
+  }
+  .mapping li:before {
+    width: 24px;
+    height: 24px;
+  }
+  .mapping li:after {
+    width: 122px;
+    left: 83px;
+    top: 11px;
+  }
+  .tag1, .tag2 {
+    font-size: 13px;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width:767px) {
+  .hidden-xs {
+    display: none!important;
+  }
+
+  .visible-xs {
+    display: block!important;
+  }
+
+  .roadmap {
+    height: auto;
+    padding-top: 40px;
+  }
+  .mapping li:before {
+    width: 20px;
+    height: 20px;
+  }
+  .mapping li:after {
+    width: 2px;
+    left: 50%;
+    top: 10px;
+    height: 70px;
+    margin-left: -1px;
+  }
+  .roadmap h3 {
+    font-size: 20px;
+    margin-bottom: 50px;
+  }
+  .mapping li {
+    width: 100%;
+    float: none;
+    margin-bottom: 50px;
+  }
+  .tag1, .tag2 {
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .tag1 {
+    top: 3px;
+    left: 80px;
+    width: 50px;
+  }
+  .tag2 {
+    top: 3px;
+    bottom: auto;
+    right: -20px;
+    width: 150px;
+    text-align: left;
   }
 }
