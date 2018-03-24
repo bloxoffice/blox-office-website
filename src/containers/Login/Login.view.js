@@ -1,14 +1,10 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import InputFields from 'components/InputFields';
 
 import './Login.scss';
-import { LoginSelector } from './Login.redux';
 import { fields } from './Login.constants';
-import { signInUser } from './Login.actions';
 
 class Login extends React.Component {
   constructor() {
@@ -70,7 +66,7 @@ class Login extends React.Component {
     const { isLoading } = this.props;
 
     return (
-      <div>
+      <div style={{ paddingBottom: 30 }}>
         <div className="login-header-container">
           <p className="header-title">LOGIN</p>
         </div>
@@ -100,22 +96,21 @@ class Login extends React.Component {
           )}
         </button>
         <p className="login-redirect">
-          Don<span>&#39;</span>t have an account? <Link to="/signup">SIGNUP</Link>
+          Don<span>&#39;</span>t have an account? <button className="clean-btn" onClick={this.props.redirectToSignup}>SIGNUP</button>
         </p>
       </div>
     );
   }
 }
 
-Login.defaultProps = {};
+Login.defaultProps = {
+  redirectToSignup: () => {},
+};
 
 Login.propTypes = {
   signInUser: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+  redirectToSignup: PropTypes.func,
 };
 
-const mapDispatchToProps = {
-  signInUser,
-};
-
-export default connect(LoginSelector, mapDispatchToProps)(Login);
+export default Login;

@@ -21,7 +21,7 @@
 
 .signup-inputs-container {
   display: grid;
-  grid-template-columns: 30% 30%;
+  grid-template-columns: 40% 40%;
   justify-content: space-around;
   margin-top: 50px;
 }
@@ -73,16 +73,17 @@
   text-align: center;
   color: #4a4a4a;
 
-  & > a {
+  & > button {
     font-weight: bold;
     color: #bf343e;
     text-decoration: none;
+    cursor: pointer;
   }
 }
 
 @media only screen
-and (min-device-width: 320px)
-and (max-device-width: 1200px)
+and (min-width: 320px)
+and (max-width: 1200px)
 and (-webkit-min-device-pixel-ratio: 2) {
   .signup-inputs-container {
     grid-template-columns: 80%;

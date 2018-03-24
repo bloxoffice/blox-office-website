@@ -13,16 +13,23 @@ import WhitePaperInfo from './components/WhitePaperInfo';
 import TokenomicsInfo from './components/TokenomicsInfo';
 import Roadmap from './components/Roadmap';
 import Team from './components/Team';
+import Signup from '../Signup';
+import Login from '../Login';
 
 import { HomeSelector } from './Home.redux';
 import { joinWhitelist } from './Home.actions';
+import { signupUser } from '../Signup/Signup.actions';
+import { signInUser } from '../Login/Login.actions';
 
 import './Home.style.scss';
 
 class Home extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      isModalOpen: false,
+      modalScreen: 'signup',
+    };
   }
 
   componentDidMount() {
@@ -44,15 +51,29 @@ class Home extends React.Component {
     });
   };
 
+  openModal = () => {
+    this.setState({
+      isModalOpen: true,
+    });
+  };
+
+  closeModal = () => {
+    this.setState({
+      isModalOpen: false,
+    });
+  };
+
 
   render() {
     const { centralNotification } = this.props;
+    const { isModalOpen, modalScreen } = this.state;
     const hiddenClass = centralNotification.message ? '' : 'hidden';
     return (
       <div className="pageContainer">
         <div className={`central-notification ${hiddenClass}`}>{centralNotification.message}</div>
         <Header
           handleElScroll={this.handleElScroll}
+          openModal={this.openModal}
         />
         <WhitelistInfo
           handleJoinWhitelist={this.props.joinWhitelist}
@@ -66,6 +87,30 @@ class Home extends React.Component {
         <Team ref={(el) => { this.team = el; }} />
         <Footer />
         <div className="footer-bg" />
+        <div>
+          <div className={`modal-fade-in ${isModalOpen ? '' : 'close'}`} />
+          <div className={`modal-box ${isModalOpen ? '' : 'close'}`}>
+            <div className="modal-dialog">
+              <button onClick={this.closeModal} className="modal-close-btn clean-btn">
+                <span className="fa fa-times" />
+              </button>
+              {modalScreen === 'signup' && (
+                <Signup
+                  signupUser={this.props.signupUser}
+                  isLoading={this.props.isSignupLoading}
+                  redirectToSignin={() => { this.setState({ modalScreen: 'signin' }); }}
+                />
+              )}
+              {modalScreen === 'signin' && (
+                <Login
+                  signInUser={this.props.signInUser}
+                  isLoading={this.props.isSigninLoading}
+                  redirectToSignup={() => { this.setState({ modalScreen: 'signup' }); }}
+                />
+              )}
+            </div>
+          </div>
+        </div>
       </div>
     );
   }
@@ -73,15 +118,23 @@ class Home extends React.Component {
 
 Home.defaultProps = {
   centralNotification: {},
+  isSignupLoading: false,
+  isSigninLoading: false,
 };
 
 Home.propTypes = {
   joinWhitelist: PropTypes.func.isRequired,
   centralNotification: PropTypes.object,
+  signupUser: PropTypes.func.isRequired,
+  isSignupLoading: PropTypes.bool,
+  signInUser: PropTypes.func.isRequired,
+  isSigninLoading: PropTypes.bool,
 };
 
 const mapDispatchToProps = {
   joinWhitelist,
+  signupUser,
+  signInUser,
 };
 
 export default connect(HomeSelector, mapDispatchToProps)(Home);

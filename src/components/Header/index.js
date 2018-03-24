@@ -52,11 +52,11 @@ class Header extends React.Component {
               <div className="link-items">
                 <button className="link-btn" onClick={() => { handleElScroll('team'); }}>Team</button>
               </div>
+              <div className="link-items login-btn-container">
+                <button onClick={this.props.openModal} className="clean-btn"><p>Login/Signup</p></button>
+              </div>
             </div>
           </div>
-          {/* <div className="link-items login-btn-container">
-        <Link to="/login"><p>Login/Signup</p></Link>
-      </div> */}
         </div>
       </div>
     );
@@ -65,10 +65,12 @@ class Header extends React.Component {
 
 Header.defaultProps = {
   handleElScroll: () => {},
+  openModal: () => {},
 };
 
 Header.propTypes = {
   handleElScroll: PropTypes.func,
+  openModal: PropTypes.func,
 };
 
 export default Header;

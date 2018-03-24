@@ -33,7 +33,7 @@
 
   .links-container {
     display: inline-grid;
-    grid-template-columns: auto auto auto auto;
+    grid-template-columns: auto auto auto auto auto;
     grid-column-gap: 10px;
     padding: 10px 0;
     font-size: 15px;
@@ -51,23 +51,26 @@
 .login-btn-container {
   border-radius: 5px;
   border: solid 1px #323648;
-  padding: 9px 18px;
-  font-size: 15px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: normal;
-  letter-spacing: normal;
-  color: #6d6f7b;
-  margin: 17px 0;
-  text-align: center;
+  box-sizing: border-box;
+  cursor: pointer;
 
-  & > a {
-    text-decoration: none;
-    color: inherit;
+  p {
+    padding: 8px 18px;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #6d6f7b;
+    text-align: center;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 0;
 
-    & > p {
-      margin: 0;
+    &:hover {
+      background-color: #bf343e;
+      color: #fff;
     }
   }
 }

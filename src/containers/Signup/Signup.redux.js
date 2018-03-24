@@ -1,13 +1,8 @@
-import { createStructuredSelector } from 'reselect';
 import {
   initialState,
   SIGNUPSUCCESS,
   SIGNUPREQUEST,
 } from './Signup.constants';
-
-export const SignupSelector = createStructuredSelector({
-  isLoading: (state) => state.signup.isLoading,
-});
 
 export const SignupReducer = (state = initialState, action) => {
   switch (action.type) {

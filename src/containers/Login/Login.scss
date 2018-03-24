@@ -2,6 +2,7 @@
   width: 100%;
   background-color: #bf343e;
   padding: 22px 38px;
+  box-sizing: border-box;
 
   .header-title {
     font-family: 'Lato', sans-serif;
@@ -20,7 +21,7 @@
 
 .login-inputs-container {
   display: grid;
-  grid-template-columns: 30%;
+  grid-template-columns: 60%;
   justify-content: center;
   margin-top: 50px;
 }
@@ -72,10 +73,11 @@
   text-align: center;
   color: #4a4a4a;
 
-  & > a {
+  & > button {
     font-weight: bold;
     color: #bf343e;
     text-decoration: none;
+    cursor: pointer;
   }
 }
 

@@ -1,13 +1,9 @@
 import React from 'react';
-import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
 import InputFields from 'components/InputFields';
 
 import { fields } from './Signup.constants';
-import { signupUser } from './Signup.actions';
-import { SignupSelector } from './Signup.redux';
 
 import './Signup.scss';
 
@@ -80,7 +76,7 @@ class Signup extends React.Component {
     const { isLoading } = this.props;
 
     return (
-      <div>
+      <div style={{ paddingBottom: 30 }}>
         <div className="signup-header-container">
           <p className="header-title">Signup</p>
         </div>
@@ -111,22 +107,21 @@ class Signup extends React.Component {
           )}
         </button>
         <p className="login-redirect">
-          Already registered? <Link to="/login">LOGIN</Link>
+          Already registered? <button className="clean-btn" onClick={this.props.redirectToSignin}>LOGIN</button>
         </p>
       </div>
     );
   }
 }
 
-Signup.defaultProps = {};
+Signup.defaultProps = {
+  redirectToSignin: () => {},
+};
 
 Signup.propTypes = {
   signupUser: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+  redirectToSignin: PropTypes.func,
 };
 
-const mapDispatchToProps = {
-  signupUser,
-};
-
-export default connect(SignupSelector, mapDispatchToProps)(Signup);
+export default Signup;

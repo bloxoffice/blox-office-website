@@ -6,6 +6,8 @@ const getCentralNotification = (state) => state.centralNotification.msg;
 
 export const HomeSelector = createStructuredSelector({
   centralNotification: getCentralNotification,
+  isSignupLoading: (state) => state.signup.isLoading,
+  isSigninLoading: (state) => state.login.isLoading,
 });
 
 /* eslint-disable */

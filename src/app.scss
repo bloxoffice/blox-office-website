@@ -53,3 +53,13 @@ input[type=number]::-webkit-outer-spin-button {
   }
 }
 
+.clean-btn {
+  background: transparent;
+  outline: 0;
+  border: none;
+  font-size: inherit;
+  color: inherit;
+  box-shadow: none;
+  padding: 0;
+}
+
