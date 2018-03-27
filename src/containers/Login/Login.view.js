@@ -52,7 +52,7 @@ class Login extends React.Component {
           password: this.state.password,
         };
 
-        this.props.signInUser(payload);
+        this.props.signInUser(payload, this.props.redirectToDashboard);
       });
     } else {
       this.setState({
@@ -105,12 +105,14 @@ class Login extends React.Component {
 
 Login.defaultProps = {
   redirectToSignup: () => {},
+  redirectToDashboard: () => {},
 };
 
 Login.propTypes = {
   signInUser: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   redirectToSignup: PropTypes.func,
+  redirectToDashboard: PropTypes.func,
 };
 
 export default Login;

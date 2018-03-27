@@ -1,4 +1,4 @@
-import { initialState, SIGNINREQUEST, SIGNINSUCCESS } from './Login.constants';
+import { initialState, SIGNINREQUEST, SIGNINSUCCESS, SIGNINFAIL } from './Login.constants';
 
 export const LoginReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -8,6 +8,11 @@ export const LoginReducer = (state = initialState, action) => {
         isLoading: true,
       };
     case SIGNINSUCCESS:
+      return {
+        ...state,
+        isLoading: false,
+      };
+    case SIGNINFAIL:
       return {
         ...state,
         isLoading: false,

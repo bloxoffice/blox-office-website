@@ -59,10 +59,13 @@ class Signup extends React.Component {
           lastName: this.state.lastName,
           email: this.state.emailAddress,
           phone: this.state.phone,
+          address: '',
+          zipcode: '',
+          country: '',
           password: this.state.password,
         };
 
-        this.props.signupUser(payload);
+        this.props.signupUser(payload, this.props.redirectToSignin);
       });
     } else {
       this.setState({

@@ -44,3 +44,4 @@ export const initialState = {
 
 export const SIGNUPREQUEST = 'SIGNUPREQUEST';
 export const SIGNUPSUCCESS = 'SIGNUPSUCCESS';
+export const SIGNUPFAIL = 'SIGNUPFAIL';

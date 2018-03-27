@@ -20,3 +20,4 @@ export const initialState = {
 
 export const SIGNINREQUEST = 'SIGNINREQUEST';
 export const SIGNINSUCCESS = 'SIGNINSUCCESS';
+export const SIGNINFAIL = 'SIGNINFAIL';

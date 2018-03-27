@@ -106,6 +106,7 @@ class Home extends React.Component {
                   signInUser={this.props.signInUser}
                   isLoading={this.props.isSigninLoading}
                   redirectToSignup={() => { this.setState({ modalScreen: 'signup' }); }}
+                  redirectToDashboard={() => { this.props.history.push('/dashboard'); }}
                 />
               )}
             </div>
@@ -129,6 +130,7 @@ Home.propTypes = {
   isSignupLoading: PropTypes.bool,
   signInUser: PropTypes.func.isRequired,
   isSigninLoading: PropTypes.bool,
+  history: PropTypes.any.isRequired,
 };
 
 const mapDispatchToProps = {
