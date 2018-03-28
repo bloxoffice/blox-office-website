@@ -1,8 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import coins from 'assets/images/coins.png';
-
 import './TokenomicsInfo.scss';
 
 const segments = [{

@@ -46,21 +46,29 @@ class Header extends React.Component {
           </div>
           <div className={`menu-links-container ${isMenuOpen ? 'open' : ''}`}>
             <div className="box-1 links-container">
-              <div className="link-items">
-                <button className="link-btn" onClick={() => { handleElScroll('about'); }}>About</button>
-              </div>
-              <div className="link-items">
-                <button className="link-btn" onClick={() => { handleElScroll('whitepaper'); }}>Whitepaper</button>
-              </div>
-              <div className="link-items">
-                <button className="link-btn" onClick={() => { handleElScroll('tokenomics'); }}>Tokenomics</button>
-              </div>
+              {!isLoggedin && (
+                <div className="link-items">
+                  <button className="link-btn" onClick={() => { handleElScroll('about'); }}>About</button>
+                </div>
+              )}
+              {!isLoggedin && (
+                <div className="link-items">
+                  <button className="link-btn" onClick={() => { handleElScroll('whitepaper'); }}>Whitepaper</button>
+                </div>
+              )}
+              {!isLoggedin && (
+                <div className="link-items">
+                  <button className="link-btn" onClick={() => { handleElScroll('tokenomics'); }}>Tokenomics</button>
+                </div>
+              )}
               {/* <div className="link-items">
           <button className="link-btn" onClick={() => { handleElScroll('roadmap'); }}>Roadmap</button>
         </div> */}
-              <div className="link-items">
-                <button className="link-btn" onClick={() => { handleElScroll('team'); }}>Team</button>
-              </div>
+              {!isLoggedin && (
+                <div className="link-items">
+                  <button className="link-btn clean-btn" onClick={() => { handleElScroll('team'); }}>Team</button>
+                </div>
+              )}
               {!isLoggedin && (
                 <div className="link-items login-btn-container">
                   <button onClick={this.props.openModal} className="clean-btn"><p>Login/Signup</p></button>

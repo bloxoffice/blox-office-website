@@ -57,7 +57,9 @@ class Dashboard extends Component {
           handleElScroll={this.handleElScroll}
           handleSignout={this.handleSignout}
         />
-        <div className="coming-soon-text">Coming Soon ...</div>
+        <div className="coming-soon-text">
+          <span>Thank you for signing up at BloxOffice ... </span><br /><span>Watch out this space after 15-April-2018. </span>
+        </div>
         {/*
         <div className="bbtc-details-container">
           <div className="bbtc-value-container">

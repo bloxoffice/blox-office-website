@@ -30,7 +30,7 @@ Platformitems.propTypes = {
 };
 
 const PlatformInfo = () => (
-  <div className="pli-container">
+  <div className="pli-container">    
     <div className="pli-content">
       <Platformitems
         plititle="Movie Crowdsale Platform"

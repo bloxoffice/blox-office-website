@@ -2,8 +2,8 @@ import React from 'react';
 // import PropTypes from 'prop-types';
 
 import userGroups from 'assets/images/user-groups.png';
-import videoPlaylist from 'assets/images/video-playlist.png';
-import moviewTicket from 'assets/images/movie-ticket.png';
+import videoPlaylist2 from 'assets/images/video_play3@.png';
+import moviewTicket2 from 'assets/images/tickets@3x.png';
 import refundSvg from 'assets/images/refund.svg';
 import intelligenceImg from 'assets/images/intelligence.png';
 
@@ -12,32 +12,44 @@ import './BusinessPlan.styles.scss';
 const BusinessPlan = () => (
   <section className="business-plan">
     <div className="container">
-      <div className="plan-title">Title goes here</div>
+      <div className="plan-title zoom">How It Works</div>
       <div className="user-groups plan-circles">
-        <img className="img-responsive" src={userGroups} alt="user-groups" />
-        <div className="plan-details hidden-xs">
-          <p className="plan-name">Movie Crowdsale Platform</p>
-          <p className="details">
-              You fill in our free application form, provide us with authority to act on your behalf to track your superannuation down and specify the payment details of where you’d like the refund deposited.
-          </p>
+        <div className="tooltip zoom1">
+          <img className="img-responsive zoom" src={userGroups} alt="user-groups" />
+          <div className="plan-details hidden-xs tooltiptext">
+            <p className="plan-name ">Movie Crowdsale Platform</p>
+            <p className="details ">Create your movie project on the platform and raise capital through pre-sale of tickets. The funds would be disbursed to the creator in stages.</p>
+          </div>
+          <div className="plan-details-mcp hidden-xs">
+            <p className="plan-name ">Movie Crowdsale Platform</p>
+            <p className="details ">Create your movie project on the platform and raise capital through pre-sale of tickets. The funds would be disbursed to the creator in stages.</p>
+          </div>
         </div>
       </div>
       <div className="video-playlist plan-circles">
-        <img className="img-responsive" src={videoPlaylist} alt="video platlist" />
-        <div className="plan-details hidden-xs">
-          <p className="plan-name">Streaming Platform</p>
-          <p className="details">
-              Annuacion will track down any missing information for you, submit your claim to the Australian Tax Office and relay any additional requirements to you through your annuacion account.
-          </p>
+        <div className="tooltip zoom1">
+          <img className="img-responsive zoom" src={videoPlaylist2} alt="user-groups" />
+          <div className="plan-details-2 hidden-xs tooltiptext">
+            <p className="plan-name ">Streaming Platform</p>
+            <p className="details ">After production, the movie would be streamed on the platform through p2p. Users will use the tickets to consume the content</p>
+          </div>
+          <div className="plan-details-vp hidden-xs">
+            <p className="plan-name ">Streaming Platform</p>
+            <p className="details ">After production, the movie would be streamed on the platform through p2p. Users will use the tickets to consume the content</p>
+          </div>
         </div>
       </div>
       <div className="movie-ticket plan-circles">
-        <img className="img-responsive" src={moviewTicket} alt="movie-ticket" />
-        <div className="plan-details hidden-xs">
-          <p className="plan-name">Movie Ticket Exchange</p>
-          <p className="details">
-              One a refund estimate has been provided to us by the USA Tax Office we will notify you of the details of your return minus any associated fees.
-          </p>
+        <div className="tooltip zoom1">
+          <img className="img-responsive zoom" src={moviewTicket2} alt="user-groups" />
+          <div className="plan-details hidden-xs tooltiptext">
+            <p className="plan-name ">Movie Ticket Exchange</p>
+            <p className="details ">Trade and exchange different movie tickets on T-Exchange</p>
+          </div>
+          <div className="plan-details-mcp hidden-xs">
+            <p className="plan-name ">Movie Ticket Exchange</p>
+            <p className="details ">Trade and exchange different movie tickets on T-Exchange</p>
+          </div>
         </div>
       </div>
       <div className="refund plan-circles">
@@ -49,7 +61,7 @@ const BusinessPlan = () => (
         </div>
         <div className="col-sm-10 platform-detail">
           <h3>Intellectual Property Platform</h3>
-          <p>Within 8-12 weeks (usually) you will receive the sum of your refund into your nominated bank account minus our commission.</p>
+          <p>Store, Transfer, Performance, Music, Distribution Rights for your project on Blockchain</p>
         </div>
         <div className="clearfix" />
       </div>

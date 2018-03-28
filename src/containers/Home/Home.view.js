@@ -11,7 +11,7 @@ import BusinessPlan from './components/BusinessPlan';
 // import PlatformInfo from './components/PlatformInfo';
 import WhitePaperInfo from './components/WhitePaperInfo';
 import TokenomicsInfo from './components/TokenomicsInfo';
-import Roadmap from './components/Roadmap';
+// import Roadmap from './components/Roadmap';
 import Team from './components/Team';
 import Signup from '../Signup';
 import Login from '../Login';
@@ -38,7 +38,7 @@ class Home extends React.Component {
       about: this.whiteListInfo.whiteListElement,
       whitepaper: this.whitepaperInfo.whitepaperElement,
       tokenomics: this.tokenomicsInfo.tokenomicsElement,
-      roadmap: this.roadmap.roadmapElement,
+      // roadmap: this.roadmap.roadmapElement,
       team: this.team.teamElement,
     };
 
@@ -96,7 +96,7 @@ class Home extends React.Component {
         {/* <PlatformInfo /> */}
         <WhitePaperInfo ref={(el) => { this.whitepaperInfo = el; }} />
         <TokenomicsInfo ref={(el) => { this.tokenomicsInfo = el; }} />
-        <Roadmap ref={(el) => { this.roadmap = el; }} />
+        {/* <Roadmap ref={(el) => { this.roadmap = el; }} /> */}
         <Team ref={(el) => { this.team = el; }} />
         <Footer />
         <div className="footer-bg" />
