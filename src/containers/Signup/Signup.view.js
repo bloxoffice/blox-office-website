@@ -8,12 +8,22 @@ import { fields } from './Signup.constants';
 import './Signup.scss';
 
 class Signup extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       errors: {},
+      emailAddress: props.whitelistEmail,
     };
   }
+
+  componentWillReceiveProps(nextProps) {
+    if (nextProps.whitelistEmail !== this.props.whitelistEmail) {
+      this.setState({
+        emailAddress: nextProps.whitelistEmail,
+      });
+    }
+  }
+
 
   handleChange = (name, val) => {
     this.setState({
@@ -87,6 +97,7 @@ class Signup extends React.Component {
           {fields.map((field) => (
             <InputFields
               key={field.name}
+              value={this.state[field.name]}
               field={field}
               handleChange={this.handleChange}
               error={errors[field.name]}
@@ -119,12 +130,14 @@ class Signup extends React.Component {
 
 Signup.defaultProps = {
   redirectToSignin: () => {},
+  whitelistEmail: undefined,
 };
 
 Signup.propTypes = {
   signupUser: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
   redirectToSignin: PropTypes.func,
+  whitelistEmail: PropTypes.any,
 };
 
 export default Signup;

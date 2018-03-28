@@ -3,6 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import bloxOffice from 'assets/images/bloxoffice@3x.png';
+import userPlaceholder from 'assets/images/userPlaceholder.png';
 
 import './Header.scss';
 
@@ -11,6 +12,7 @@ class Header extends React.Component {
     super();
     this.state = {
       isMenuOpen: false,
+      isUerMenuOpen: false,
     };
   }
 
@@ -21,11 +23,18 @@ class Header extends React.Component {
   };
 
   render() {
-    const { handleElScroll } = this.props;
-    const { isMenuOpen } = this.state;
+    const { handleElScroll, isLoggedin } = this.props;
+    const { isMenuOpen, isUerMenuOpen } = this.state;
 
     return (
       <div className="header-container">
+        {isUerMenuOpen && (
+          <div className="user-menu-container">
+            <div>
+              <button onClick={this.props.handleSignout} className="signout-btn clean-btn">Sign out</button>
+            </div>
+          </div>
+        )}
         <div className="header-content">
           <div className="box-1">
             <img src={bloxOffice} alt="BloxOffice" className="main-logo" />
@@ -52,9 +61,23 @@ class Header extends React.Component {
               <div className="link-items">
                 <button className="link-btn" onClick={() => { handleElScroll('team'); }}>Team</button>
               </div>
-              <div className="link-items login-btn-container">
-                <button onClick={this.props.openModal} className="clean-btn"><p>Login/Signup</p></button>
-              </div>
+              {!isLoggedin && (
+                <div className="link-items login-btn-container">
+                  <button onClick={this.props.openModal} className="clean-btn"><p>Login/Signup</p></button>
+                </div>
+              )}
+              {isLoggedin && (
+                <div className="profile-pic-container">
+                  <button
+                    className="clean-btn"
+                    onClick={() => {
+                      this.setState({ isUerMenuOpen: !this.state.isUerMenuOpen });
+                    }}
+                  >
+                    <img src={userPlaceholder} alt="user" className="profile-pic" />
+                  </button>
+                </div>
+              )}
             </div>
           </div>
         </div>
@@ -66,11 +89,15 @@ class Header extends React.Component {
 Header.defaultProps = {
   handleElScroll: () => {},
   openModal: () => {},
+  isLoggedin: false,
+  handleSignout: () => {},
 };
 
 Header.propTypes = {
   handleElScroll: PropTypes.func,
   openModal: PropTypes.func,
+  isLoggedin: PropTypes.bool,
+  handleSignout: PropTypes.func,
 };
 
 export default Header;

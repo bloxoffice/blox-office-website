@@ -17,7 +17,7 @@ import Signup from '../Signup';
 import Login from '../Login';
 
 import { HomeSelector } from './Home.redux';
-import { joinWhitelist } from './Home.actions';
+// import { joinWhitelist } from './Home.actions';
 import { signupUser } from '../Signup/Signup.actions';
 import { signInUser } from '../Login/Login.actions';
 
@@ -29,6 +29,7 @@ class Home extends React.Component {
     this.state = {
       isModalOpen: false,
       modalScreen: 'signup',
+      whitelistEmail: undefined,
     };
   }
 
@@ -40,6 +41,10 @@ class Home extends React.Component {
       roadmap: this.roadmap.roadmapElement,
       team: this.team.teamElement,
     };
+
+    if (this.props.location.state) {
+      this.handleElScroll(this.props.location.state.section);
+    }
   }
 
   handleElScroll = (key) => {
@@ -63,10 +68,18 @@ class Home extends React.Component {
     });
   };
 
+  joinWhitelist = (email) => {
+    this.setState({
+      whitelistEmail: email,
+      isModalOpen: true,
+      modalScreen: 'signup',
+    });
+  };
+
 
   render() {
     const { centralNotification } = this.props;
-    const { isModalOpen, modalScreen } = this.state;
+    const { isModalOpen, modalScreen, whitelistEmail } = this.state;
     const hiddenClass = centralNotification.message ? '' : 'hidden';
     return (
       <div className="pageContainer">
@@ -76,7 +89,7 @@ class Home extends React.Component {
           openModal={this.openModal}
         />
         <WhitelistInfo
-          handleJoinWhitelist={this.props.joinWhitelist}
+          handleJoinWhitelist={this.joinWhitelist}
           ref={(el) => { this.whiteListInfo = el; }}
         />
         <BusinessPlan />
@@ -96,6 +109,7 @@ class Home extends React.Component {
               </button>
               {modalScreen === 'signup' && (
                 <Signup
+                  whitelistEmail={whitelistEmail}
                   signupUser={this.props.signupUser}
                   isLoading={this.props.isSignupLoading}
                   redirectToSignin={() => { this.setState({ modalScreen: 'signin' }); }}
@@ -124,17 +138,18 @@ Home.defaultProps = {
 };
 
 Home.propTypes = {
-  joinWhitelist: PropTypes.func.isRequired,
+  // joinWhitelist: PropTypes.func.isRequired,
   centralNotification: PropTypes.object,
   signupUser: PropTypes.func.isRequired,
   isSignupLoading: PropTypes.bool,
   signInUser: PropTypes.func.isRequired,
   isSigninLoading: PropTypes.bool,
   history: PropTypes.any.isRequired,
+  location: PropTypes.any.isRequired,
 };
 
 const mapDispatchToProps = {
-  joinWhitelist,
+  // joinWhitelist,
   signupUser,
   signInUser,
 };

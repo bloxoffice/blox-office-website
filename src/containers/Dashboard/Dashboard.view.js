@@ -1,31 +1,32 @@
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
 import Header from 'components/Header';
 
 import { DashboardSelector } from './Dashboard.redux';
+import { signoutUser } from '../Login/Login.actions';
 import './Dashboard.style.scss';
 
-const transactions = [{
-  id: 1,
-  from: '0x345a465c753d764b563a64c6464c348b74',
-  amount: '0.004',
-  date: '12-06-2016',
-  status: 'success',
-}, {
-  id: 2,
-  from: '0x345a465c753d764b563a64c6464c348b74',
-  amount: '0.004',
-  date: '12-06-2016',
-  status: 'pending',
-}, {
-  id: 3,
-  from: '0x345a465c753d764b563a64c6464c348b74',
-  amount: '0.004',
-  date: '12-06-2016',
-  status: 'success',
-}];
+// const transactions = [{
+//   id: 1,
+//   from: '0x345a465c753d764b563a64c6464c348b74',
+//   amount: '0.004',
+//   date: '12-06-2016',
+//   status: 'success',
+// }, {
+//   id: 2,
+//   from: '0x345a465c753d764b563a64c6464c348b74',
+//   amount: '0.004',
+//   date: '12-06-2016',
+//   status: 'pending',
+// }, {
+//   id: 3,
+//   from: '0x345a465c753d764b563a64c6464c348b74',
+//   amount: '0.004',
+//   date: '12-06-2016',
+//   status: 'success',
+// }];
 
 class Dashboard extends Component {
   constructor() {
@@ -33,14 +34,31 @@ class Dashboard extends Component {
     this.state = {};
   }
 
-  handleElScroll = () => {};
+  handleElScroll = (section) => {
+    this.props.history.push({
+      pathname: '/',
+      state: {
+        section,
+      },
+    });
+  };
+
+  handleSignout = () => {
+    this.props.signoutUser(() => {
+      this.props.history.push('/');
+    });
+  };
 
   render() {
     return (
       <div className="dashboard-container">
         <Header
+          isLoggedin
           handleElScroll={this.handleElScroll}
+          handleSignout={this.handleSignout}
         />
+        <div className="coming-soon-text">Coming Soon ...</div>
+        {/*
         <div className="bbtc-details-container">
           <div className="bbtc-value-container">
             <div className="bbtc-value-inner1">
@@ -99,13 +117,19 @@ class Dashboard extends Component {
             </tbody>
           </table>
         </div>
+        */}
       </div>
     );
   }
 }
 
-Dashboard.propTypes = {};
+Dashboard.propTypes = {
+  signoutUser: PropTypes.func.isRequired,
+  history: PropTypes.any.isRequired,
+};
 
-const mapDispatchToProps = {};
+const mapDispatchToProps = {
+  signoutUser,
+};
 
 export default connect(DashboardSelector, mapDispatchToProps)(Dashboard);

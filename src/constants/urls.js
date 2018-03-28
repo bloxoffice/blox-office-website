@@ -4,4 +4,5 @@ export default {
   sendEmail: '/sendEmai/',
   signup: '/signup',
   signin: '/signin',
+  signout: '/signout',
 };

@@ -1,6 +1,6 @@
 import urls from 'constants/urls';
-import { setCookie } from 'utils/CookieUtils';
-import { SIGNINREQUEST, SIGNINSUCCESS, SIGNINFAIL } from './Login.constants';
+import { setCookie, getCookie, eraseCookie } from 'utils/CookieUtils';
+import { SIGNINREQUEST, SIGNINSUCCESS, SIGNINFAIL, SIGNOUTSUCCESS } from './Login.constants';
 
 export const signInUser = (payload, sch, ech) => (dispatch) => {
   dispatch({
@@ -39,4 +39,27 @@ export const signInUser = (payload, sch, ech) => (dispatch) => {
         if (ech) { ech(); }
       }
     });
+};
+
+export const signoutUser = (sch) => (dispatch) => {
+  const sesseionId = getCookie('sessionId');
+
+  fetch(`${urls.baseUrl1}${urls.signout}`, {
+    method: 'GET',
+    headers: new Headers({
+      'X-AUTH-HEADER': sesseionId,
+    }),
+  }).then(() => {
+    eraseCookie('sessionId');
+    dispatch({
+      type: SIGNOUTSUCCESS,
+    });
+    if (sch) { sch(); }
+  }).catch(() => {
+    eraseCookie('sessionId');
+    dispatch({
+      type: SIGNOUTSUCCESS,
+    });
+    if (sch) { sch(); }
+  });
 };

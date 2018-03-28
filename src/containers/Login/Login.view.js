@@ -75,6 +75,7 @@ class Login extends React.Component {
             <InputFields
               key={field.name}
               field={field}
+              value={this.state[field.name]}
               handleChange={this.handleChange}
               error={errors[field.name]}
             />
