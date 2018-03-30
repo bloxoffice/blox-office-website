@@ -2,7 +2,7 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 import PropTypes from 'prop-types';
 
-import bloxOffice from 'assets/images/bloxoffice@3x.png';
+import bloxOffice from 'assets/images/bitmap@3x_latest.png';
 import userPlaceholder from 'assets/images/userPlaceholder.png';
 
 import './Header.scss';
