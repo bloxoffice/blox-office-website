@@ -73,7 +73,7 @@ class WhitelistInfo extends React.Component {
               <p className="waitlist-error">{emailError}</p>
             </div>
             <div className="timer-container">
-              <p className="pre-sales-label">Pre-sales starts in</p>
+              <p className="pre-sales-label">PRE-SALE STARTS IN</p>
               <Timer date="04/15/2018 22:00:00" />
             </div>
           </div>

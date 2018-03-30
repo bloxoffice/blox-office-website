@@ -91,6 +91,7 @@
 .pre-sales-label {
   margin: 45px 15px 0;
   font-size: 22px;
+  font-family: worksans-medium, sans-serif;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
@@ -108,7 +109,7 @@
 .timer-container {
   width: 80%;
   max-width: 350px;
-  margin: auto;
+  //margin: auto;
 }
 
 @media only screen
