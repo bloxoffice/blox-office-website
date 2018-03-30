@@ -62,7 +62,7 @@ class WhitelistInfo extends React.Component {
             <div className="email-form">
               <input
                 type="text"
-                placeholder="Email address"
+                placeholder="Email Address"
                 className="email-input"
                 onChange={this.handleEmailInput}
                 style={{
