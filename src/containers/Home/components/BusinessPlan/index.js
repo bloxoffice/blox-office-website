@@ -26,7 +26,7 @@ const BusinessPlan = () => (
           </div>
         </div>
       </div>
-      <div className="video-playlist plan-circles">
+      <div className="user-groups plan-circles">
         <div className="tooltip zoom1">
           <img className="img-responsive zoom" src={videoPlaylist2} alt="user-groups" />
           <div className="plan-details-2 hidden-xs tooltiptext">
@@ -39,7 +39,7 @@ const BusinessPlan = () => (
           </div>
         </div>
       </div>
-      <div className="movie-ticket plan-circles">
+      <div className="user-groups plan-circles">
         <div className="tooltip zoom1">
           <img className="img-responsive zoom" src={moviewTicket2} alt="user-groups" />
           <div className="plan-details hidden-xs tooltiptext">
@@ -60,8 +60,8 @@ const BusinessPlan = () => (
           <img className="img-responsive" src={intelligenceImg} alt="platform" />
         </div>
         <div className="col-sm-10 platform-detail">
-          <h3>Intellectual Property Platform</h3>
-          <p>Store, Transfer, Performance, Music, Distribution Rights for your project on Blockchain</p>
+          <span className="Intellectual-Propert">Intellectual Property Platform</span>
+          <p className="Within-8-12-weeks-u">Store, Transfer, Performance, Music, Distribution Rights for your project on Blockchain</p>
         </div>
         <div className="clearfix" />
       </div>

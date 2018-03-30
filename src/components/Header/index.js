@@ -71,7 +71,7 @@ class Header extends React.Component {
               )}
               {!isLoggedin && (
                 <div className="link-items login-btn-container">
-                  <button onClick={this.props.openModal} className="clean-btn"><p>Login/Signup</p></button>
+                  <button onClick={this.props.openModal} className="clean-btn link-btn"><p>Login/Signup</p></button>
                 </div>
               )}
               {isLoggedin && (

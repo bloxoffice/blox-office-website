@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import bharath from 'assets/images/bharath.jpeg';
 import arko from 'assets/images/arko.jpeg';
 import rashad from 'assets/images/rashad.jpeg';
+import linkedin from 'assets/images/linkedin.png';
 
 import './Team.scss';
 
@@ -14,6 +15,7 @@ const members = [{
   role: 'Co-Founder',
   desc: 'Blockchain Technology Influencer adept at developing complicated distributed systems',
   email: 'bharath@bloxoffice.io',
+  linkedinUrl: 'https://www.linkedin.com/in/bharath-kadaluri-abb5275a/',
 }, {
   photo: arko,
   alt: 'arko',
@@ -21,6 +23,7 @@ const members = [{
   role: 'Co-Founder',
   desc: 'Blockchain expert and regulations specialist',
   email: 'arko@bloxoffice.io',
+  linkedinUrl: 'https://www.linkedin.com/in/arko-ganguli/',
 }, {
   photo: rashad,
   alt: 'rashad',
@@ -28,17 +31,19 @@ const members = [{
   role: 'Co-Founder',
   desc: 'Market Maker and Crypto- Evangelist\n',
   email: 'rashad@bloxoffice.io',
+  linkedinUrl: 'https://www.linkedin.com/in/therashadhasan/',
 }];
 
 const Member = ({ member }) => (
-  <div className="member-container">
+  <div className="Background">
     <div>
       <img src={member.photo} alt={member.alt} className="member-photo" />
       <div className="member-content">
         <h1 className="member-name">{member.name}</h1>
         <p className="member-role">{member.role}</p>
-        <p className="member-desc">{member.desc}</p>
-        <p className="member-email"><span className="fa fa-envelope-o mail-icon" />{member.email}</p>
+        <a href={member.linkedinUrl}><img src={linkedin} alt={member.name} className="Shape" /></a>
+        {/* <p className="member-desc">{member.desc}</p>
+        <p className="member-email"><span className="fa fa-envelope-o mail-icon" />{member.email}</p> */}
       </div>
     </div>
   </div>

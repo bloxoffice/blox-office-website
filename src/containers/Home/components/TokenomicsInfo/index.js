@@ -37,7 +37,7 @@ segments.forEach((segment, i) => {
 });
 
 const Donut = ({ segmnts }) => (
-  <svg width="260px" height="260px" viewBox="0 0 42 42" className="donut">
+  <svg width="360px" height="360px" viewBox="0 0 42 42" className="donut">
     <circle cx="21" cy="21" r="15.91549430918954" fill="#fcfcfc" className="donut-hole" />
     {segmnts.map((segment, i) => (
       <circle

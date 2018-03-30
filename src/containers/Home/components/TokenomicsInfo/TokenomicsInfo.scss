@@ -1,6 +1,6 @@
 .ti-container {
   background-color: #fcfcfc;
-  border: solid 1px rgba(151, 151, 151, 0.09);
+  border: solid 1px rgba(151, 151, 151, 0.09);  
 }
 
 .ti-content {
@@ -12,8 +12,9 @@
 }
 
 .logo-container {
-  padding: 160px 0;
+  padding: 220px 0;
   position: relative;
+  padding-right: 50px;
 }
 
 .logo {
@@ -78,7 +79,7 @@
 }
 
 .donut-container {
-  padding: 100px 0;
+  padding: 130px 0;
 }
 
 @media only screen

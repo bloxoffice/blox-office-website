@@ -1,4 +1,40 @@
 
+.icons8-intelligence-80 {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  //background-color: #6d6f7b;
+}
+
+.Intellectual-Propert {
+  width: 267px;
+  height: 24px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #2e3035;
+}
+
+.Within-8-12-weeks-u {
+  // width: 501px;
+  // height: 46px;
+  font-family: 'Work Sans', sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.53;
+  letter-spacing: 0.1px;
+  text-align: left;
+  color: #546066;
+  color: var(--gunmetal);
+}
+
 .floatImg{
   animation-name: floatImg;
   animation-duration: 5s;
@@ -76,13 +112,13 @@
 	}
 
 	40% {
-		-webkit-transform: translateY(-15px);
-		transform: translateY(-15px);
+		-webkit-transform: translateY(-5px);
+		transform: translateY(-5px);
 	}
 
 	80% {
-		-webkit-transform: translateY(-8px);
-		transform: translateY(-8px);
+		-webkit-transform: translateY(-3px);
+		transform: translateY(-3px);
 	}
 }
 
@@ -138,7 +174,7 @@
       margin: 0 auto;
       font-size: 22px;
       color: #2e3035;
-      font-family: WorkSansMedium, sans-serif;
+      font-family: 'Work Sans', sans-serif;
       text-align: center;
       border-radius: 5px;
       box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
@@ -280,7 +316,7 @@
     .plan-name {
       color: #2e3035;
       font-size: 22px;
-      font-family: WorkSansMedium, sans-serif;
+      font-family: 'Work Sans', sans-serif;
     }
 
     .details {
@@ -400,7 +436,7 @@
     .plan-name {
       color: #2e3035;
       font-size: 22px;
-      font-family: WorkSansMedium, sans-serif;
+      font-family: 'Work Sans', sans-serif;
     }
     .details {
       color: #546066;
@@ -432,7 +468,7 @@
     }
 
     .property-platform {
-      width: 825px;
+      width: 985px;
       margin: 0 auto;
       border-radius: 5px;
       background-color: #ffffff;
@@ -443,18 +479,21 @@
       padding-top: 20px;
       padding-bottom: 20px;
       padding-left: 43px;
+      float: left;
+      padding-right: 70px;
     }
     .platform img {
       width: 60px;
     }
     .platform-detail {
-      padding-left: 30px;
+      padding-left: 100px;
       padding-right: 100px;
+      padding-top: 20px;
     }
     .platform-detail h3 {
       font-size: 20px;
       color: #2e3035;
-      font-family: WorkSansMedium, sans-serif;
+      font-family: 'Work Sans', sans-serif;
     }
     .platform-detail p {
       color: #546066;

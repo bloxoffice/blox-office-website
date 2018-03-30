@@ -1,6 +1,6 @@
 .whitepaper-info {
-  height: 350px;
-  background-color: #bf343e;
+  height: auto;
+  background-color: #fffefe;
   display: grid;
   grid-template-columns: auto auto;
   justify-content: space-around;
@@ -9,8 +9,8 @@
 }
 
 .video-player {
-  width: 477px;
-  height: 263px;
+  width: 650px;
+  height: 363px;
   position: relative;
 }
 
@@ -18,7 +18,7 @@
   width: 336px;
   height: 57px;
   border-radius: 4px;
-  border: solid 1px #ffffff;
+  border: solid 2px #fad356;
   padding: 20px 30px 20px 50px;
   background: transparent;
   cursor: pointer;

@@ -10,11 +10,11 @@
 }
 
 .wli-logo-container {
-  padding: 100px 0 150px;
+  padding: 175px 0 150px;
 }
 
 .wli-info {
-  padding: 130px 0 200px;
+  padding: 175px 0 200px;
 }
 
 .bloxoffice-hero {
@@ -40,6 +40,7 @@
   text-align: left;
   color: #5b5e6d;
   text-transform: uppercase;
+  font-family: 'Work Sans', sans-serif;
 }
 
 .email-form {}
@@ -69,7 +70,7 @@
 .whitelist-btn {
   display: inline-block;
   width: 140px;
-  height: 47px;
+  height: 48px;
   border-radius: 4px;
   border: solid 1px #bf343e;
   /*padding: 16px 30px; */
@@ -82,6 +83,9 @@
   text-align: left;
   color: #bf343e;
   cursor: pointer;
+  padding-top: 4px;
+  padding-left: 15px;
+  font-family: 'Work Sans', sans-serif;
 
   &:focus {
     outline: none;
@@ -91,7 +95,7 @@
 .pre-sales-label {
   margin: 45px 0 0;
   font-size: 22px;
-  font-family: worksans-medium, sans-serif;
+  font-family: 'Work Sans', sans-serif;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
