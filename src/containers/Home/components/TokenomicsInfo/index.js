@@ -4,12 +4,12 @@ import coins from 'assets/images/coins.png';
 import './TokenomicsInfo.scss';
 
 const segments = [{
-  stat: 'Circulation',
-  val: 67,
+  stat: 'CrowdSale',
+  val: 60,
   color: '#ac92ec',
 }, {
   stat: 'Team & Development',
-  val: 20,
+  val: 16,
   color: '#a0d468',
 }, {
   stat: 'Bounty',
@@ -17,12 +17,16 @@ const segments = [{
   color: '#4fc1e9',
 }, {
   stat: 'Private Sale',
-  val: 3,
+  val: 7,
   color: '#fc6e51',
 }, {
   stat: 'Mentors',
   val: 8,
   color: '#3c63e2',
+}, {
+  stat: 'Pre-Sale',
+  val: 7,
+  color: '#9af1ff',
 }];
 
 let totalLength = 0;
