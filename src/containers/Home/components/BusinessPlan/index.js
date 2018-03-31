@@ -12,10 +12,10 @@ import './BusinessPlan.styles.scss';
 const BusinessPlan = () => (
   <section className="business-plan">
     <div className="container">
-      <div className="plan-title zoom">How It Works</div>
+      <div className="plan-title zoom">HOW IT WORKS</div>
       <div className="user-groups plan-circles">
         <div className="tooltip zoom1">
-          <img className="img-responsive zoom" src={userGroups} alt="user-groups" />
+          <img className="img-responsive zoom busInfoImgCs" src={userGroups} alt="user-groups" />
           <div className="plan-details hidden-xs tooltiptext">
             <p className="plan-name ">Movie Crowdsale Platform</p>
             <p className="details ">Create your movie project on the platform and raise capital through pre-sale of tickets. The funds would be disbursed to the creator in stages.</p>
@@ -26,9 +26,9 @@ const BusinessPlan = () => (
           </div>
         </div>
       </div>
-      <div className="user-groups plan-circles">
+      <div className="video-playlist plan-circles">
         <div className="tooltip zoom1">
-          <img className="img-responsive zoom" src={videoPlaylist2} alt="user-groups" />
+          <img className="img-responsive zoom busInfoImg" src={videoPlaylist2} alt="user-groups" />
           <div className="plan-details-2 hidden-xs tooltiptext">
             <p className="plan-name ">Streaming Platform</p>
             <p className="details ">After production, the movie would be streamed on the platform through p2p. Users will use the tickets to consume the content</p>
@@ -39,9 +39,9 @@ const BusinessPlan = () => (
           </div>
         </div>
       </div>
-      <div className="user-groups plan-circles">
+      <div className="movie-ticket plan-circles">
         <div className="tooltip zoom1">
-          <img className="img-responsive zoom" src={moviewTicket2} alt="user-groups" />
+          <img className="img-responsive zoom busInfoImgtkt" src={moviewTicket2} alt="user-groups" />
           <div className="plan-details hidden-xs tooltiptext">
             <p className="plan-name ">Movie Ticket Exchange</p>
             <p className="details ">Trade and exchange different movie tickets on T-Exchange</p>

@@ -32,19 +32,35 @@ const members = [{
   desc: 'Market Maker and Crypto- Evangelist\n',
   email: 'rashad@bloxoffice.io',
   linkedinUrl: 'https://www.linkedin.com/in/therashadhasan/',
-}];
+},
+/* , {
+  photo: arko,
+  alt: 'arko',
+  name: 'ARKO GANGULI',
+  role: 'Co-Founder',
+  desc: 'Blockchain expert and regulations specialist',
+  email: 'arko@bloxoffice.io',
+  linkedinUrl: 'https://www.linkedin.com/in/arko-ganguli/',
+}, {
+  photo: rashad,
+  alt: 'rashad',
+  name: 'RASHAD HASAN',
+  role: 'Co-Founder',
+  desc: 'Market Maker and Crypto- Evangelist\n',
+  email: 'rashad@bloxoffice.io',
+  linkedinUrl: 'https://www.linkedin.com/in/therashadhasan/',
+} */
+];
 
 const Member = ({ member }) => (
   <div className="Background">
-    <div>
-      <img src={member.photo} alt={member.alt} className="member-photo" />
-      <div className="member-content">
-        <h1 className="member-name">{member.name}</h1>
-        <p className="member-role">{member.role}</p>
-        <a href={member.linkedinUrl}><img src={linkedin} alt={member.name} className="Shape" /></a>
-        {/* <p className="member-desc">{member.desc}</p>
-        <p className="member-email"><span className="fa fa-envelope-o mail-icon" />{member.email}</p> */}
-      </div>
+    <img src={member.photo} alt={member.alt} className="member-photo teamImg" />
+    <div className="member-content">
+      <h1 className="member-name">{member.name}</h1>
+      <p className="member-role">{member.role}</p>
+      <a href={member.linkedinUrl}><img src={linkedin} alt={member.name} className="Shape" /></a>
+      {/* <p className="member-desc">{member.desc}</p>
+      <p className="member-email"><span className="fa fa-envelope-o mail-icon" />{member.email}</p> */}
     </div>
   </div>
 );
