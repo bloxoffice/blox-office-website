@@ -13,6 +13,10 @@
   padding-top: 18px;
 }
 
+.busInfoImgCs img{
+  color: #e4eded;
+}
+
 .icons8-intelligence-80 {
   width: 70px;
   height: 70px;
@@ -224,19 +228,18 @@
       content: '';
       width: 1px;
       height: 114px;
-      border: 1.5px solid #e4eded;
+      border: 1.5px solid #deecec;
       top: -119px;
       left: 28px;
     }
 
     .user-groups:hover {
-      border: solid 2px #ffd607;
+      border: solid 1px #ffd607;
     }
     .user-groups {
       box-shadow: 0 10px 40px 0 rgba(211, 228, 230, 0.9);
       background-color: #f7fcfc;
-      //border: solid 2px #ffd607;
-      border: solid 2px #e4eded;
+      //border: solid 2px #e4eded;
       position: relative;
     }
 
@@ -245,7 +248,7 @@
       content: '';
       width: 1px;
       height: 103px;
-      border: 1.5px solid #e4eded;//#ffffff;
+      border: 1.5px solid #dfecec;
       top: -108px;
       left: 28px;
     }
@@ -337,7 +340,10 @@
 
     .plan-circles img {
       width: 35px;
+      color: #e4eded;
     }
+
+
 
     .video-playlist .plan-details {
       left: auto;
@@ -352,7 +358,7 @@
       right: -12px;
       border-top: 12px solid transparent;
       border-bottom: 12px solid transparent;
-      border-left: 12px solid #ffffff;
+      border-left: 12px solid #ffd00b;
       border-right: 0;
     }
 
@@ -362,8 +368,8 @@
       width: 60px;
       box-shadow: 0 10px 40px 0 rgba(211, 228, 230, 0.9);
       background-color: #f7fcfc;
-      //border: solid 2px #ffd607;
-      border: solid 2px #ffffff;
+      //border: solid 2px #ffd607; #deecec;
+      border: solid 1px #deecec;
       position: relative;
     }
     .video-playlist img, .movie-ticket img {
@@ -372,11 +378,11 @@
     }
 
     .video-playlist:hover {
-      border: solid 2px #ffd607;
+      border: solid 1px #ffd607;
     }
 
     .movie-ticket:hover {
-      border: solid 2px #ffd607;
+      border: solid 1px #ffd607;
     }
 
     .movie-ticket {
@@ -389,7 +395,7 @@
       box-shadow: 0 10px 40px 0 rgba(211, 228, 230, 0.9);
       background-color: #f7fcfc;
       //border: solid 2px #ffd607;
-      border: solid 2px #ffffff;
+      border: solid 1px #deecec;
       position: relative;
     }
     .refund img {
@@ -461,8 +467,7 @@
       right: -12px;
       border-top: 12px solid transparent;
       border-bottom: 12px solid transparent;
-      border-left: 12px solid #ffffff;
-      border-right: 0;
+      border-left: 12px solid #ffd00b;
     }
     .movie-ticket .plan-details {
       //background-color: #ffffff;
@@ -470,7 +475,7 @@
       box-shadow: 0 20px 40px 0 rgba(231, 244, 246, 0.9);
     }
     .movie-ticket .plan-details:before {
-      border-right: 12px solid #ffffff;
+      border-right: 12px solid #ffd00b;
     }
 
     .property-platform {

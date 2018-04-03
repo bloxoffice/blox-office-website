@@ -66,7 +66,7 @@ class Header extends React.Component {
         </div> */}
               {!isLoggedin && (
                 <div className="link-items">
-                  <button className="link-btn clean-btn" onClick={() => { handleElScroll('team'); }}>Team</button>
+                  <button className="link-btn" onClick={() => { handleElScroll('team'); }}>Team</button>
                 </div>
               )}
               {!isLoggedin && (

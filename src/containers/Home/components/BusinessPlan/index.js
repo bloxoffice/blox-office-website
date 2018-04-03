@@ -29,7 +29,7 @@ const BusinessPlan = () => (
       <div className="video-playlist plan-circles">
         <div className="tooltip zoom1">
           <img className="img-responsive zoom busInfoImg" src={videoPlaylist2} alt="user-groups" />
-          <div className="plan-details-2 hidden-xs tooltiptext">
+          <div className="plan-details hidden-xs tooltiptext">
             <p className="plan-name ">Streaming Platform</p>
             <p className="details ">After production, the movie would be streamed on the platform through p2p. Users will use the tickets to consume the content</p>
           </div>
