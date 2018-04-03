@@ -54,7 +54,7 @@ class WhitelistInfo extends React.Component {
             <img src={bloxofficeHero} alt="bloxoffice-Hero" className="bloxoffice-hero" />
           </div>
           <div className="wli-info">
-            <img src={bloxofficeTitle} alt="bloxoffice-Title" className="bloxoffice-title" />
+            <img src={bloxofficeTitle} alt="bloxoffice-Title" className="bloxoffice-title rubberBand flipInX" />
             <p className="decentralised-movie">
               Decentralised movie experience
               powered by Blockchain
@@ -63,16 +63,16 @@ class WhitelistInfo extends React.Component {
               <input
                 type="text"
                 placeholder="Email Address"
-                className="email-input"
+                className="email-input bounceInUp shake"
                 onChange={this.handleEmailInput}
                 style={{
                   border: emailError !== '' ? '1px solid #8f232b' : 'solid 1px #ebebeb',
                 }}
               />
-              <button onClick={this.handleJoinWhitelist} className="whitelist-btn">JOIN WAITLIST</button>
+              <button onClick={this.handleJoinWhitelist} className="whitelist-btn bubble-anim slideInLeft">JOIN WAITLIST</button>
               <p className="waitlist-error">{emailError}</p>
             </div>
-            <div className="timer-container">
+            <div className="timer-container slideOutLeft">
               <p className="pre-sales-label">PRE-SALE STARTS IN</p>
               <Timer date="04/15/2018 22:00:00" />
             </div>
