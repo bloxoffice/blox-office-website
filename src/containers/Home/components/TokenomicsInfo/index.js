@@ -50,7 +50,17 @@ const Donut = ({ segmnts }) => (
         stroke={segment.color}
         strokeDasharray={i === 0 ? '100 0' : `${segment.val} ${(100 - segment.val)}`}
         strokeDashoffset={segment.dashoffset}
-      />
+      >
+        <animateTransform
+          attributeName="transform"
+          attributeType="XML"
+          type="rotate"
+          from="0 21 21"
+          to="360 21 21"
+          dur="10s"
+          repeatCount="indefinite"
+        />
+      </circle>
     ))}
   </svg>
 );
@@ -91,7 +101,9 @@ class TokenomicsInfo extends React.Component {
       <div className="ti-container" ref={(el) => { this.tokenomicsElement = el; }}>
         <div className="ti-content">
           <div className="logo-container">
-            <img src={coins} alt="coins" className="logo" />
+            <div className="logo-box">
+              <img src={coins} alt="coins" className="logo" />
+            </div>
             <p className="tokenomics-txt">tokenomics</p>
           </div>
           <div className="donut-container">
