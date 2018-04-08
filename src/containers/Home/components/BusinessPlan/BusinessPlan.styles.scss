@@ -193,23 +193,6 @@
       background-color: #ffffff;
       border: solid 1px #deecec;
       position: relative;
-
-      &:after {
-        position: absolute;
-        content: '';
-        width: 30px;
-        height: 30px;
-        background-color: #dfdfdf;
-        border: solid 4px #ffffff;
-        bottom: -15px;
-        left: 50%;
-        -webkit-transform: translateX(-50%);
-        -moz-transform: translateX(-50%);
-        -o-transform: translateX(-50%);
-        -ms-transform: translateX(-50%);
-        transform: translateX(-50%);
-        border-radius: 50%;
-      }
     }
 
     .plan-circles {
@@ -247,9 +230,9 @@
       position: absolute;
       content: '';
       width: 1px;
-      height: 103px;
+      height: 118px;
       border: 1.5px solid #dfecec;
-      top: -108px;
+      top: -121px;
       left: 28px;
     }
 

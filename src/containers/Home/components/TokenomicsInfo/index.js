@@ -1,5 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { arc } from 'd3';
+
 import coins from 'assets/images/coins.svg';
 import './TokenomicsInfo.scss';
 
@@ -30,48 +32,61 @@ const segments = [{
 }];
 
 let totalLength = 0;
-segments.forEach((segment, i) => {
-  const dashoffset = (100 - totalLength) + 25;
+segments.forEach((segment) => {
   totalLength += segment.val;
-  segments[i].dashoffset = i === 0 ? 25 : dashoffset;
 });
 
-const Donut = ({ segmnts }) => (
+const arcs = [];
+let totalAngle = 0;
+const pi = Math.PI;
+
+segments.forEach((segment) => {
+  const angle = (segment.val / totalLength) * (2 * pi);
+  const d = arc()
+    .startAngle(totalAngle)
+    .endAngle(totalAngle + angle);
+  arcs.push(d);
+  totalAngle += angle;
+});
+
+const Donut = ({
+  segmnts, handleMouseOver, handleMouseLeave, hoveredArc,
+}) => (
   <svg width="360px" height="360px" viewBox="0 0 42 42" className="donut">
-    <circle cx="21" cy="21" r="15.91549430918954" fill="#fcfcfc" className="donut-hole" />
-    {segmnts.map((segment, i) => (
-      <circle
-        key={segment.stat}
-        cx="21"
-        cy="21"
-        r="15.91549430918954"
-        fill="transparent"
-        strokeWidth={3}
-        stroke={segment.color}
-        strokeDasharray={i === 0 ? '100 0' : `${segment.val} ${(100 - segment.val)}`}
-        strokeDashoffset={segment.dashoffset}
-      >
-        <animateTransform
-          attributeName="transform"
-          attributeType="XML"
-          type="rotate"
-          from="0 21 21"
-          to="360 21 21"
-          dur="10s"
-          repeatCount="indefinite"
+    <g transform="translate(20, 20)">
+      {segmnts.map((segment, i) => (
+        <path
+          onMouseEnter={() => {
+            handleMouseOver(i);
+          }}
+          onMouseLeave={() => {
+            handleMouseLeave(i);
+          }}
+          onFocus={() => {}}
+          key={segment.stat}
+          d={hoveredArc === i ? arcs[i].innerRadius('12').outerRadius('18')() : arcs[i].innerRadius('12').outerRadius('15')()}
+          fill={segment.color}
         />
-      </circle>
-    ))}
+      ))}
+    </g>
   </svg>
 );
+
+Donut.defaultProps = {
+  handleMouseOver: () => {},
+  handleMouseLeave: () => {},
+  hoveredArc: -1,
+};
 
 Donut.propTypes = {
   segmnts: PropTypes.arrayOf(PropTypes.shape({
     stat: PropTypes.string.isRequired,
     val: PropTypes.number.isRequired,
     color: PropTypes.string.isRequired,
-    dashoffset: PropTypes.number.isRequired,
   })).isRequired,
+  handleMouseOver: PropTypes.func,
+  handleMouseLeave: PropTypes.func,
+  hoveredArc: PropTypes.number,
 };
 
 const StatItem = ({ color, stat, val }) => (
@@ -93,8 +108,24 @@ StatItem.propTypes = {
 class TokenomicsInfo extends React.Component {
   constructor() {
     super();
-    this.state = {};
+    this.state = {
+      hoveredArc: -1,
+    };
   }
+
+  handleMouseOver = (index) => {
+    this.setState({
+      hoveredArc: index,
+    });
+  };
+
+  handleMouseLeave = (index) => {
+    if (this.state.hoveredArc === index) {
+      this.setState({
+        hoveredArc: -1,
+      });
+    }
+  };
 
   render() {
     return (
@@ -109,6 +140,9 @@ class TokenomicsInfo extends React.Component {
           <div className="donut-container">
             <Donut
               segmnts={segments}
+              hoveredArc={this.state.hoveredArc}
+              handleMouseOver={this.handleMouseOver}
+              handleMouseLeave={this.handleMouseLeave}
             />
           </div>
           <div className="stats-container">
